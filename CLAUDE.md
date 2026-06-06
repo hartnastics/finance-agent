@@ -37,7 +37,7 @@ knowledge/
     ├── finanzfluss
     ├── Quelle2...
     └── Quelle3...
-```
+
 
 1.Schritt: Datenlage klären: Es werden alle enthaltenen Unterordner aus den Hauptordner(Hauptordner = Quellenordner wie Finanzfluss,) analysiert, so wird vorgegangen:
 	- alle Unterordner wie "Aktienkurs bewerten" beinhalten die mehrere dazugehörigen Transkripte die analysiert werden
@@ -84,7 +84,7 @@ Pflicht-Inhalt jeder Zusammenfassung
 - Risiken explizit nennen — nie verschweigen
 - Quellenangabe am Ende
 
-
+---
 
 ## Zusammenfassungen — Regeln
 
@@ -92,6 +92,7 @@ Pflicht-Inhalt jeder Zusammenfassung
 - **Neu erstellen:** Wenn ein neuer Themenordner hinzukommt
 - **Aktualisieren:** Wenn neue Transkripte in einen bestehenden Ordner kommen → neue Datei mit aktuellem Datum, alte bleibt als Archiv
 
+---
 
 ## Dashboard — Aktualisierungsregeln
 
