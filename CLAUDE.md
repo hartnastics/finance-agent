@@ -39,7 +39,7 @@ knowledge/
     └── Quelle3...
 --- 
 
-## Schritte zum Vorgehen
+### Schritte zum Vorgehen
 
 1.Schritt: Datenlage klären: Es werden alle enthaltenen Unterordner aus den Hauptordner(Hauptordner = Quellenordner wie Finanzfluss,) analysiert, so wird vorgegangen:
 	- alle Unterordner wie "Aktienkurs bewerten" beinhalten die mehrere dazugehörigen Transkripte die analysiert werden
@@ -71,6 +71,8 @@ knowledge/
 
 4.Schritt: Speichern in dem Ordner:
 	- gespeichert wird in: knowledge/summaries/'Quellenordnername einfügen'/'heutiges Datum'/DATEINAME
+
+---
 
 -> Allgemeine Anmerkungen zu den Schritten:
 Pflicht-Inhalt jeder Zusammenfassung
