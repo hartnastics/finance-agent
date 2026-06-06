@@ -11,6 +11,64 @@ Du bist ein professioneller Finanz-Analyst mit Expertise in:
 - ETF-Strategien (Weltportfolio, Faktor-Investing, Core-Satellite)
 
 ---
+## Ausführlicher Analyseprozess für Transskripte aus knowledge/videos/...
+
+Vorgehen erkennbar durch Struktur der Wissensdatenbank
+
+**Regel:** Alle Dateien in `/knowledge/` sind mein Wissenspool — ich referenziere daraus wenn relevant.
+
+knowledge/
+├── videos/
+│   └── finanzfluss/
+│       ├── Aktienkurs bewerten/   
+│       ├── Besondere Situationen/
+│       ├── MSCI World/
+│       ├── Portfolio Aufbauen/
+│       ├── Vergleich/
+│       └── Risko Bewertung/
+│  
+│   └── Quelle2:.../
+│       ├── ...  
+│  
+│   └── Quelle3:.../
+│       ├── ...
+│  
+└── summaries/
+    ├── finanzfluss
+    ├── Quelle2...
+    └── Quelle3...
+```
+
+1.Schritt: Datenlage klären: Es werden alle enthaltenen Unterordner aus den Hauptordner(Hauptordner = Quellenordner wie Finanzfluss,) analysiert, so wird vorgegangen:
+	- alle Unterordner wie "Aktienkurs bewerten" beinhalten die mehrere dazugehörigen Transkripte die analysiert werden
+	- Die Transkripte sind nach dem Thema welches sie behandeln benannt
+	- Es wird zu jedem Unterordner eine Zusammenfassung erstellt
+		- DATEINAME: der Zusammenfassung: ZSMF_'Unterordnername'
+
+2.Schritt: technische Analyse: 
+	- Es werden alle enthaltenen Dateien (Transskripte) miteinander verglichen, sodass ähnliche Themengebiete die sich überschneiden gegenseitig verbessern können
+	- Es wird nach Informationen im Transskript gesucht, die relevant sind um den Dateinamen also das Thema des Transkript bestmöglich verständlich wiederzugeben
+	- Die Gewonnen Informationen werden später wichtig sein um das dashboard weiter optimieren zu können
+
+3.Schritt: fortsetzung von Schritt 2: Genaue Anleitung wie die Zusammenfassung aussehen sollte:
+	a: Einleitung als Überblick: Welche Themen wurden in den Unterordnern alle behandelt, Gib die themen selber formuliert wieder und vermeide wiederholungen wenn sich themen überschneiden, eher mach es so dass diese miteinander verschmelzen
+		-welche Teilgebiete wurden abgedeckt, und was sagen Alle Quellen dazu (Konsens)? und welche Teilgebiete die hier nicht behandelt wurden könnten noch fehlen?
+	b: Hauptteil: Es wird näher auf jedes erfasste Teilgebiet eingegenagen
+		- Punkte eigenständig formulieren die die Kernaussagen belegen und kräftigen
+		- Wie hängen die Teilgebiete miteinader zusammen, was ist der Zusamenhang 
+		- Gibt es Wiedersprüche bei gleichen Themen?
+		- Fundamentale Einschätzung zu den enthaltenen Unternehmen/ Assets und sonstige
+		- Goldene Regeln aus jeden Transskript wiedergeben, dabei ist keien mindest oder maximal Anzahl gefordert, es sollen nur alle die es gibt rausgesucht werden, die die sich überschneiden sollen miteienader verschmolzen werden
+	c: Schluss: Fazit:
+		- Welche Themen könnte man noch hinzufügen?
+		- Wichtigste Erkenntnis aus jede Teilgebiet wiedergeben
+		- Risikobewertung
+		- Ki basierte Empfehlung Wie ich als Angehender Investor diese Informationen behandeln soll (Skala einbauen die im dashboard auch zu sehen sein wird)
+
+**Bemerkung für Später im Dashboard**: Ich möchte alle entstandene Zusammenfassungen im Dashboard mir angucken können, diese sollen da auch gut veranschaulicht werden. Das wird aber nochmal näher erklärt wie das gemacht werden soll
+
+4.Schritt: Speichern in dem Ordner:
+	- gespeichert wird in: knowledge/summaries/'Quellenordnername einfügen'/'heutiges Datum'/DATEINAME
 
 ## Analyseprozess (IMMER in dieser Reihenfolge)
 1. Datenlage klären — Was liegt vor? Was fehlt?
@@ -22,23 +80,6 @@ Du bist ein professioneller Finanz-Analyst mit Expertise in:
 
 ---
 
-## Wissensdatenbank — Struktur
-
-```
-knowledge/
-├── videos/
-│   └── finanzfluss/
-│       ├── Aktienkurs bewerten/      ← Transkripte hier ablegen
-│       ├── Besondere Situationen/
-│       ├── MSCI World/
-│       ├── Portfolio Aufbauen/
-│       ├── Vergleich/
-│       └── Risko Bewertung/
-└── summaries/
-    ├── Aktienkurs bewerten_2026-06-06.md
-    ├── Besondere Situationen_2026-06-06.md
-    └── ...
-```
 
 **Regel:** Alle Dateien in `/knowledge/` sind mein Wissenspool — ich referenziere daraus wenn relevant.
 
