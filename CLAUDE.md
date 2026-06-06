@@ -37,7 +37,9 @@ knowledge/
     ├── finanzfluss
     ├── Quelle2...
     └── Quelle3...
+--- 
 
+## Schritte zum Vorgehen
 
 1.Schritt: Datenlage klären: Es werden alle enthaltenen Unterordner aus den Hauptordner(Hauptordner = Quellenordner wie Finanzfluss,) analysiert, so wird vorgegangen:
 	- alle Unterordner wie "Aktienkurs bewerten" beinhalten die mehrere dazugehörigen Transkripte die analysiert werden
