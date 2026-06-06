@@ -1,0 +1,23 @@
+channels:
+  # Deutsche Finanz-Kanaele
+  - name: "Finanzfluss"
+    id: "UCeARcCUiZg79SCVZV3kYkCg"
+
+  - name: "Andreas Backmund"
+    id: "UCsT4_xMSuc3DFudlA_pBHhg"
+
+  - name: "Aktien mit Kopf"
+    id: "UC4EQHfLBCvSMNGjLNLSovuA"
+
+  # Englische Kanaele
+  - name: "Ben Felix"
+    id: "UCRFG7pnCCBEBqMFYPDFLRhQ"
+
+  - name: "Patrick Boyle"
+    id: "UCASM4O7RFVuX-kFWCOANLaQ"
+
+  - name: "Rayner Teo"
+    id: "UCh4DQZP7z5yMN0TYzMbFNbQ"
+
+# Max. Videos pro Kanal pro Durchlauf
+max_videos_per_run: 3
