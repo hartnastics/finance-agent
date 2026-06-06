@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance Agent Dashboard</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #22263a;
+      --border: #2e3350;
+      --accent: #4f8ef7;
+      --accent2: #7c3aed;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --radius: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* SIDEBAR */
+    .layout { display: flex; min-height: 100vh; }
+
+    .sidebar {
+      width: 220px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+    }
+
+    .sidebar-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);
+      padding: 8px 12px 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--muted);
+      transition: all 0.15s;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+
+    .nav-item:hover { background: var(--surface2); color: var(--text); }
+    .nav-item.active { background: rgba(79,142,247,0.15); color: var(--accent); }
+
+    /* MAIN */
+    .main {
+      margin-left: 220px;
+      padding: 32px;
+      flex: 1;
+    }
+
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* HEADER */
+    .page-header {
+      margin-bottom: 28px;
+    }
+    .page-header h1 { font-size: 24px; font-weight: 700; }
+    .page-header p { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+    /* CARDS GRID */
+    .grid { display: grid; gap: 16px; }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .card-value {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .card-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-green { background: rgba(34,197,94,0.15); color: var(--green); }
+    .badge-red { background: rgba(239,68,68,0.15); color: var(--red); }
+    .badge-yellow { background: rgba(245,158,11,0.15); color: var(--yellow); }
+    .badge-blue { background: rgba(79,142,247,0.15); color: var(--accent); }
+    .badge-purple { background: rgba(124,58,237,0.15); color: #a78bfa; }
+
+    /* TABLE */
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+
+    thead { background: var(--surface2); }
+    th {
+      padding: 12px 16px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      text-align: left;
+      font-weight: 600;
+    }
+    td {
+      padding: 12px 16px;
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .symbol {
+      font-weight: 700;
+      color: var(--accent);
+      font-family: monospace;
+      font-size: 15px;
+    }
+
+    /* KNOWLEDGE CARDS */
+    .knowledge-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .knowledge-card:hover { border-color: var(--accent); }
+    .knowledge-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .knowledge-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    /* INSIGHTS */
+    .insight {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+    }
+    .insight-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .insight-icon.blue { background: rgba(79,142,247,0.15); }
+    .insight-icon.green { background: rgba(34,197,94,0.15); }
+    .insight-icon.yellow { background: rgba(245,158,11,0.15); }
+    .insight-icon.red { background: rgba(239,68,68,0.15); }
+    .insight h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .insight p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* COMPOUND TABLE */
+    .compound-table td:not(:first-child) { text-align: right; }
+    .compound-table .highlight { color: var(--green); font-weight: 600; }
+
+    /* MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      max-width: 680px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .modal h2 { font-size: 18px; margin-bottom: 16px; }
+    .modal-close {
+      float: right;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 20px;
+      background: none;
+      border: none;
+      color: var(--muted);
+    }
+    .modal-close:hover { color: var(--text); }
+
+    .insight-detail h4 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin: 16px 0 8px;
+    }
+    .insight-detail p, .insight-detail li {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .insight-detail ul { padding-left: 20px; }
+    .insight-detail li { margin-bottom: 4px; }
+
+    /* SECTION DIVIDER */
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 28px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* PROGRESS BAR */
+    .progress-bar {
+      height: 6px;
+      background: var(--surface2);
+      border-radius: 3px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+
+    /* CHECKLIST */
+    .checklist { list-style: none; }
+    .checklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .check { font-size: 16px; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .sidebar { display: none; }
+      .main { margin-left: 0; padding: 16px; }
+      .grid-4 { grid-template-columns: 1fr 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sidebar-logo">📈 FinanzAgent</div>
+    <button class="nav-item active" onclick="showPage('overview')">🏠 &nbsp;Übersicht</button>
+    <button class="nav-item" onclick="showPage('watchlist')">👁 &nbsp;Watchlist</button>
+    <button class="nav-item" onclick="showPage('portfolio')">💼 &nbsp;Portfolio</button>
+    <button class="nav-item" onclick="showPage('knowledge')">📚 &nbsp;Knowledge-Base</button>
+    <button class="nav-item" onclick="showPage('calculator')">🧮 &nbsp;Zinseszins-Rechner</button>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- OVERVIEW -->
+    <div id="page-overview" class="page active">
+      <div class="page-header">
+        <h1>Übersicht</h1>
+        <p>Dein persönlicher Finanz-Dashboard — Stand: Juni 2026</p>
+      </div>
+
+      <div class="grid grid-4" style="margin-bottom:16px">
+        <div class="card">
+          <div class="card-title">Portfolio-Wert</div>
+          <div class="card-value">—</div>
+          <div class="card-sub">Noch keine Positionen</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Watchlist</div>
+          <div class="card-value">9</div>
+          <div class="card-sub">Aktien · ETFs · Krypto</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Knowledge-Base</div>
+          <div class="card-value">1</div>
+          <div class="card-sub">Quellen gespeichert</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Empf. Sparrate</div>
+          <div class="card-value">≥150 €</div>
+          <div class="card-sub">10 % von Nettoeinkommen</div>
+        </div>
+      </div>
+
+      <div class="section-title">🔑 Wichtigste Erkenntnisse</div>
+
+      <div class="insight">
+        <div class="insight-icon blue">⏳</div>
+        <div>
+          <h4>Zinseszins — Zeit ist dein größter Hebel</h4>
+          <p>100 €/Monat über 30 Jahre bei 7 % p.a. = <strong>122.000 €</strong> statt 36.000 € ohne Zins. Faktor 3,4x — nur durch Geduld.</p>
+        </div>
+      </div>
+
+      <div class="insight">
+        <div class="insight-icon red">🔥</div>
+        <div>
+          <h4>Inflation frisst unveranlagtes Geld</h4>
+          <p>Tagesgeld-Zinsen liegen langfristig immer unter der Inflationsrate. Wer nicht investiert, verliert real an Kaufkraft.</p>
+        </div>
+      </div>
+
+      <div class="insight">
+        <div class="insight-icon green">🌍</div>
+        <div>
+          <h4>Ein Welt-ETF reicht als Basis</h4>
+          <p>FTSE All-World oder MSCI ACWI — weltweit gestreut, tausende Aktien, TER unter 0,25 %. Keine Einzelaktien nötig für Einsteiger.</p>
+        </div>
+      </div>
+
+      <div class="insight">
+        <div class="insight-icon yellow">💡</div>
+        <div>
+          <h4>"Zuerst sich selbst bezahlen"</h4>
+          <p>Sparrate direkt am Gehaltseingangstag abbuchen lassen. Was übrig bleibt, darf ausgegeben werden — kein schlechtes Gewissen.</p>
+        </div>
+      </div>
+
+      <div class="section-title">✅ Deine ETF-Checkliste</div>
+      <div class="card">
+        <ul class="checklist">
+          <li><span class="check">✅</span> Weltweiter Index (MSCI ACWI / FTSE All-World)</li>
+          <li><span class="check">✅</span> Fondsvolumen > 100 Mio. €</li>
+          <li><span class="check">✅</span> Thesaurierend (automatische Reinvestition)</li>
+          <li><span class="check">✅</span> TER < 0,25 %</li>
+          <li><span class="check">⬜</span> Sparplan aufgesetzt</li>
+          <li><span class="check">⬜</span> Notgroschen (3 Monatsausgaben) auf Tagesgeld</li>
+          <li><span class="check">⬜</span> Dynamisierung aktiviert (+10–20 €/Jahr)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WATCHLIST -->
+    <div id="page-watchlist" class="page">
+      <div class="page-header">
+        <h1>Watchlist</h1>
+        <p>Deine beobachteten Assets — Aktien, ETFs & Krypto</p>
+      </div>
+
+      <div class="section-title">📊 Aktien</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Name</th>
+              <th>Sektor</th>
+              <th>Notiz</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="symbol">AAPL</span></td>
+              <td>Apple Inc.</td>
+              <td>Technologie</td>
+              <td>Core-Position</td>
+              <td><span class="badge badge-blue">Beobachten</span></td>
+            </tr>
+            <tr>
+              <td><span class="symbol">MSFT</span></td>
+              <td>Microsoft</td>
+              <td>Technologie</td>
+              <td>KI-Exposure</td>
+              <td><span class="badge badge-blue">Beobachten</span></td>
+            </tr>
+            <tr>
+              <td><span class="symbol">NVDA</span></td>
+              <td>Nvidia</td>
+              <td>Semiconductoren</td>
+              <td>KI-Hardware</td>
+              <td><span class="badge badge-yellow">Volatil</span></td>
+            </tr>
+            <tr>
+              <td><span class="symbol">BRK.B</span></td>
+              <td>Berkshire Hathaway</td>
+              <td>Holding / Value</td>
+              <td>Value-Anker</td>
+              <td><span class="badge badge-green">Stabil</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-title">📦 ETFs</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Name</th>
+              <th>Strategie</th>
+              <th>Empfehlung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="symbol">VWRL</span></td>
+              <td>Vanguard FTSE All-World</td>
+              <td>Globale Diversifikation</td>
+              <td><span class="badge badge-green">⭐ Kernposition</span></td>
+            </tr>
+            <tr>
+              <td><span class="symbol">VOO</span></td>
+              <td>Vanguard S&P 500</td>
+              <td>US-Markt Basis</td>
+              <td><span class="badge badge-blue">Ergänzung</span></td>
+            </tr>
+            <tr>
+              <td><span class="symbol">QQQ</span></td>
+              <td>Invesco Nasdaq 100</td>
+              <td>Tech-Exposure</td>
+              <td><span class="badge badge-yellow">Vorsicht (Klumpen)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-title">₿ Krypto</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Asset</th>
+              <th>Notiz</th>
+              <th>Risiko</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="symbol">BTC</span></td>
+              <td>Bitcoin</td>
+              <td>Store of Value · Halving-Zyklen beachten</td>
+              <td><span class="badge badge-yellow">Mittel-Hoch</span></td>
+            </tr>
+            <tr>
+              <td><span class="symbol">ETH</span></td>
+              <td>Ethereum</td>
+              <td>Smart Contract Plattform</td>
+              <td><span class="badge badge-red">Hoch</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-title">🎯 Fokus-Sektoren</div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="font-size:24px;margin-bottom:8px">🤖</div>
+          <div style="font-weight:600;margin-bottom:4px">KI & Semiconductoren</div>
+          <div style="font-size:13px;color:var(--muted)">NVDA, MSFT als direkte Plays · Im VWRL bereits enthalten</div>
+        </div>
+        <div class="card">
+          <div style="font-size:24px;margin-bottom:8px">🌱</div>
+          <div style="font-weight:600;margin-bottom:4px">Erneuerbare Energien</div>
+          <div style="font-size:13px;color:var(--muted)">Langfristiger Megatrend · Eigene ETF-Position möglich</div>
+        </div>
+        <div class="card">
+          <div style="font-size:24px;margin-bottom:8px">🏥</div>
+          <div style="font-weight:600;margin-bottom:4px">Gesundheitstechnologie</div>
+          <div style="font-size:13px;color:var(--muted)">Demografischer Rückenwind · Defensiver Sektor</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div id="page-portfolio" class="page">
+      <div class="page-header">
+        <h1>Portfolio</h1>
+        <p>Deine aktuellen Positionen</p>
+      </div>
+
+      <div class="card" style="text-align:center;padding:60px 20px">
+        <div style="font-size:48px;margin-bottom:16px">💼</div>
+        <h2 style="margin-bottom:8px">Portfolio noch leer</h2>
+        <p style="color:var(--muted);max-width:400px;margin:0 auto;font-size:14px">
+          Trage deine Positionen in <code>data/portfolio.md</code> ein —
+          dann erscheinen sie hier automatisch mit Allokation, Performance und Risiko-Analyse.
+        </p>
+      </div>
+
+      <div class="section-title" style="margin-top:28px">📋 Empfohlene Portfolio-Struktur</div>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="card-title">Einsteiger-Portfolio (Simpel)</div>
+          <div style="margin-top:12px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+              <span style="font-size:14px">VWRL (FTSE All-World)</span>
+              <span style="font-weight:600;color:var(--accent)">100 %</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+            <div style="font-size:12px;color:var(--muted);margin-top:8px">→ Ein ETF, alles drin, kein Aufwand</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Fortgeschrittenes Portfolio</div>
+          <div style="margin-top:12px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+              <span style="font-size:14px">VWRL (Core)</span>
+              <span style="font-weight:600;color:var(--accent)">70 %</span>
+            </div>
+            <div class="progress-bar" style="margin-bottom:8px"><div class="progress-fill" style="width:70%"></div></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+              <span style="font-size:14px">Sektor-ETFs</span>
+              <span style="font-weight:600;color:var(--accent2)">20 %</span>
+            </div>
+            <div class="progress-bar" style="margin-bottom:8px"><div class="progress-fill" style="width:20%;background:var(--accent2)"></div></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+              <span style="font-size:14px">BTC (optional)</span>
+              <span style="font-weight:600;color:var(--yellow)">10 %</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width:10%;background:var(--yellow)"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KNOWLEDGE BASE -->
+    <div id="page-knowledge" class="page">
+      <div class="page-header">
+        <h1>Knowledge-Base</h1>
+        <p>Dein gesammeltes Finanzwissen aus Videos, Lectures & Strategien</p>
+      </div>
+
+      <div class="grid grid-3" style="margin-bottom:16px">
+        <div class="card">
+          <div class="card-title">Quellen gesamt</div>
+          <div class="card-value">1</div>
+          <div class="card-sub">Videos · Lectures · Strategien</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Summaries</div>
+          <div class="card-value">1</div>
+          <div class="card-sub">In knowledge/summaries/</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Strategien</div>
+          <div class="card-value">0</div>
+          <div class="card-sub">Noch keine gespeichert</div>
+        </div>
+      </div>
+
+      <div class="section-title">🎬 Videos — Finanzfluss</div>
+
+      <div class="knowledge-card" onclick="openModal('modal-finanzfluss')">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <div>
+            <span class="badge badge-blue" style="margin-bottom:8px">Video Summary</span>
+            <h3>Anfangen mit Investieren (2026)</h3>
+            <p>Schritt-für-Schritt-Guide für Einsteiger: ETF-Auswahl, Depot-Eröffnung, Sparplan aufsetzen. Mit konkreten Zahlen zum Zinseszins-Effekt.</p>
+          </div>
+          <span style="color:var(--muted);font-size:20px;margin-left:16px">›</span>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+          <span class="badge badge-purple">ETF</span>
+          <span class="badge badge-green">Einsteiger</span>
+          <span class="badge badge-yellow">Zinseszins</span>
+          <span class="badge badge-blue">Sparplan</span>
+        </div>
+      </div>
+
+      <div class="section-title">📖 Strategien</div>
+      <div class="card" style="text-align:center;padding:40px;color:var(--muted)">
+        Noch keine Strategien gespeichert — füge Dateien in <code>knowledge/strategies/</code> hinzu.
+      </div>
+
+      <div class="section-title">🎓 Lectures</div>
+      <div class="card" style="text-align:center;padding:40px;color:var(--muted)">
+        Noch keine Lectures gespeichert — füge Dateien in <code>knowledge/lectures/</code> hinzu.
+      </div>
+    </div>
+
+    <!-- CALCULATOR -->
+    <div id="page-calculator" class="page">
+      <div class="page-header">
+        <h1>Zinseszins-Rechner</h1>
+        <p>Berechne wie dein Vermögen über die Zeit wächst</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="card-title" style="margin-bottom:16px">Parameter eingeben</div>
+
+          <div style="margin-bottom:16px">
+            <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px">Monatliche Sparrate (€)</label>
+            <input type="number" id="calc-rate" value="150" min="1"
+              style="width:100%;padding:10px 12px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;outline:none"
+              oninput="calculate()">
+          </div>
+
+          <div style="margin-bottom:16px">
+            <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px">Jährliche Rendite (%)</label>
+            <input type="number" id="calc-return" value="7" min="0" max="30" step="0.5"
+              style="width:100%;padding:10px 12px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;outline:none"
+              oninput="calculate()">
+          </div>
+
+          <div style="margin-bottom:16px">
+            <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px">Anlagehorizont (Jahre)</label>
+            <input type="range" id="calc-years" value="20" min="1" max="40"
+              style="width:100%;accent-color:var(--accent)"
+              oninput="document.getElementById('years-display').textContent=this.value+' Jahre';calculate()">
+            <div style="font-size:13px;color:var(--accent);margin-top:4px" id="years-display">20 Jahre</div>
+          </div>
+
+          <div style="margin-bottom:16px">
+            <label style="font-size:13px;color:var(--muted);display:block;margin-bottom:6px">Startkapital (€)</label>
+            <input type="number" id="calc-start" value="0" min="0"
+              style="width:100%;padding:10px 12px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;outline:none"
+              oninput="calculate()">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title" style="margin-bottom:16px">Ergebnis</div>
+          <div style="margin-bottom:20px">
+            <div style="font-size:13px;color:var(--muted)">Endkapital</div>
+            <div id="result-total" style="font-size:36px;font-weight:700;color:var(--green)">—</div>
+          </div>
+          <div class="grid grid-2" style="gap:12px;margin-bottom:20px">
+            <div style="background:var(--surface2);padding:12px;border-radius:8px">
+              <div style="font-size:12px;color:var(--muted)">Eingezahlt</div>
+              <div id="result-invested" style="font-size:18px;font-weight:600">—</div>
+            </div>
+            <div style="background:var(--surface2);padding:12px;border-radius:8px">
+              <div style="font-size:12px;color:var(--muted)">Zinsgewinn</div>
+              <div id="result-gains" style="font-size:18px;font-weight:600;color:var(--accent)">—</div>
+            </div>
+          </div>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:8px">Kapitalwachstum</div>
+          <div class="progress-bar" style="height:10px">
+            <div id="gains-bar" class="progress-fill" style="width:0%"></div>
+          </div>
+          <div id="gains-pct" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
+        </div>
+      </div>
+
+      <div class="section-title">📅 Entwicklung über die Zeit</div>
+      <div class="table-wrap">
+        <table id="compound-table" class="compound-table">
+          <thead>
+            <tr>
+              <th>Jahr</th>
+              <th>Eingezahlt</th>
+              <th>Zinsgewinn</th>
+              <th>Gesamt</th>
+              <th>Faktor</th>
+            </tr>
+          </thead>
+          <tbody id="compound-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- MODAL: Finanzfluss Video -->
+<div class="modal-overlay" id="modal-finanzfluss">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-finanzfluss')">✕</button>
+    <h2>📹 Anfangen mit Investieren — Finanzfluss (2026)</h2>
+    <div class="insight-detail">
+      <h4>Kernaussage</h4>
+      <p>Frühzeitig investieren + langer Anlagehorizont + breit gestreuter ETF = optimale Basis für Vermögensaufbau.</p>
+
+      <h4>Zinseszins (konkrete Zahlen)</h4>
+      <p>100 €/Monat · 30 Jahre · 7 % p.a. = <strong style="color:var(--green)">122.000 €</strong> statt 36.000 € ohne Zins → Faktor 3,4x</p>
+
+      <h4>ETF-Auswahlkriterien</h4>
+      <ul>
+        <li>Weltweiter Index: MSCI ACWI oder FTSE All-World</li>
+        <li>Fondsvolumen > 100 Mio. €</li>
+        <li>Thesaurierend (Erträge werden reinvestiert)</li>
+        <li>TER so niedrig wie möglich (ideaL: &lt; 0,25 %)</li>
+        <li>Empfehlungen: Vanguard FTSE All-World / Invesco FTSE All-World</li>
+      </ul>
+
+      <h4>5 Schritte zum ersten ETF-Sparplan</h4>
+      <ul>
+        <li><strong>1.</strong> ETF auswählen (WKN notieren)</li>
+        <li><strong>2.</strong> Depot eröffnen (Online-Broker, Video-Ident)</li>
+        <li><strong>3.</strong> Sparrate bestimmen (≥ 10 % Netto)</li>
+        <li><strong>4.</strong> Dauerauftrag am Zahltag einrichten</li>
+        <li><strong>5.</strong> Sparplan aufsetzen & laufen lassen</li>
+      </ul>
+
+      <h4>Wann NICHT in ETFs</h4>
+      <p>Geld das in &lt; 10 Jahren gebraucht wird → Tagesgeld / Festgeld / Geldmarktfonds</p>
+
+      <h4>Quelle</h4>
+      <p>Finanzfluss YouTube-Kanal · knowledge/videos/finanzfluss/</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    document.getElementById('page-' + name).classList.add('active');
+    event.currentTarget.classList.add('active');
+    if (name === 'calculator') calculate();
+  }
+
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+  }
+
+  document.querySelectorAll('.modal-overlay').forEach(m => {
+    m.addEventListener('click', e => { if (e.target === m) m.classList.remove('open'); });
+  });
+
+  function fmt(n) {
+    return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
+  }
+
+  function calculate() {
+    const rate = parseFloat(document.getElementById('calc-rate').value) || 0;
+    const ret = parseFloat(document.getElementById('calc-return').value) / 100 / 12 || 0;
+    const years = parseInt(document.getElementById('calc-years').value) || 0;
+    const start = parseFloat(document.getElementById('calc-start').value) || 0;
+    const months = years * 12;
+
+    let value = start;
+    const rows = [];
+    for (let y = 1; y <= years; y++) {
+      for (let m = 0; m < 12; m++) {
+        value = value * (1 + ret) + rate;
+      }
+      const invested = start + rate * y * 12;
+      const gains = value - invested;
+      rows.push({ year: y, invested, gains, total: value });
+    }
+
+    const total = value;
+    const invested = start + rate * months;
+    const gains = total - invested;
+    const pct = invested > 0 ? (gains / invested * 100) : 0;
+
+    document.getElementById('result-total').textContent = fmt(total);
+    document.getElementById('result-invested').textContent = fmt(invested);
+    document.getElementById('result-gains').textContent = fmt(gains);
+    document.getElementById('gains-bar').style.width = Math.min(pct / 3, 100) + '%';
+    document.getElementById('gains-pct').textContent = `+${pct.toFixed(0)} % Gewinn auf eingezahltes Kapital`;
+
+    const tbody = document.getElementById('compound-tbody');
+    const milestones = [1, 2, 3, 5, 10, 15, 20, 25, 30, 35, 40].filter(y => y <= years);
+    tbody.innerHTML = rows
+      .filter(r => milestones.includes(r.year))
+      .map(r => `
+        <tr>
+          <td>Jahr ${r.year}</td>
+          <td>${fmt(r.invested)}</td>
+          <td style="color:var(--accent)">${fmt(r.gains)}</td>
+          <td class="highlight">${fmt(r.total)}</td>
+          <td>${(r.total / (r.invested || 1)).toFixed(2)}x</td>
+        </tr>
+      `).join('');
+  }
+
+  calculate();
+</script>
+
+</body>
+</html>
