@@ -15,27 +15,25 @@ def main():
         print("Keine URL angegeben")
         return
     url = sys.argv[1].strip()
-    print(f"URL: {url}")
     video_id = extract_video_id(url)
     print(f"Video ID: {video_id}")
     if not video_id:
         print("Ungueltige URL")
         return
-    print("Versuche Transkript zu laden...")
+    print("Lade Transkript...")
     try:
-        data = YouTubeTranscriptApi.get_transcript(video_id, languages=['de','en'])
-        print(f"Transkript geladen: {len(data)} Segmente")
-        text = " ".join([x['text'] for x in data])
-        print(f"Text Laenge: {len(text)} Zeichen")
+        ytt_api = YouTubeTranscriptApi()
+        transcript = ytt_api.fetch(video_id)
+        text = " ".join([x.text for x in transcript])
+        print(f"Geladen: {len(text)} Zeichen")
     except Exception as e:
-        print(f"FEHLER beim Laden: {e}")
+        print(f"FEHLER: {e}")
         return
     out = Path("knowledge/videos")
     out.mkdir(parents=True, exist_ok=True)
     f = out / f"video_{video_id}.txt"
-    f.write_text(f"URL: {url}\n\n{text}", encoding="utf-8")
-    print(f"Datei gespeichert: {f.name}")
-    print(f"Dateipfad: {f.resolve()}")
+    f.write_text(f"URL: {url}\nDatum: {datetime.now().strftime('%Y-%m-%d')}\n\n{text}", encoding="utf-8")
+    print(f"Gespeichert: {f.name}")
 
 if __name__ == "__main__":
     main()
