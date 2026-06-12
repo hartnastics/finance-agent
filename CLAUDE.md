@@ -125,6 +125,46 @@ Pflicht-Inhalt jeder Zusammenfassung
 
 ---
 
+## Workflow: TJR-Trading Bootcamp-Days
+
+Wenn neue Dateien in `knowledge/videos/TJR-Traiding/Bootcamp-Days/` hinzukommen:
+
+1. Alle neuen Tag-Dateien lesen
+2. Pro Datei eine Übersicht erstellen nach diesem Format:
+   - DATEINAME: `Übersicht Tag X-Thema` (X = Tagnummer, Thema = Dateiname)
+   - SPEICHERORT: `knowledge/summaries/TJR-Trading/Bootcamp/`
+
+### Pflicht-Struktur jeder Übersicht:
+
+**Header:** Erstelldatum + Quelldatei
+
+**Überblick:** 3–5 Sätze — worum geht es, in welche Bereiche teilt sich der Inhalt
+
+**Teilgebiete:** Für jedes Thema im Transkript:
+- Eigene Überschrift
+- Kernaussagen als Punkte formuliert (nicht wörtlich zitieren, eigenständig erklären)
+- Tabellen wo sinnvoll (z.B. Kerzenmuster, Regeln)
+- Konkrete Beispiele aus dem Transkript erklären
+
+**Zusammenhang:** Wie hängen die Teilgebiete miteinander zusammen?
+
+**Goldene Regeln:** Alle expliziten Regeln aus dem Tag — überschneidende zusammenführen
+
+**Aufgaben:** Zwei Kategorien — beide Pflicht:
+- *Aus dem Video:* Hausaufgaben die im Transkript explizit genannt werden, exakt wiedergeben
+- *Von Claude erstellt:* Zusätzliche Übungsaufgaben die das Verständnis des Tages vertiefen — praxisnah, konkret, direkt anwendbar auf dem Chart
+
+**Was könnte noch fehlen:** Themen die logisch dazugehören aber nicht behandelt wurden
+
+**Fazit:**
+- Wichtigste Erkenntnis
+- Risikobewertung (was passiert wenn man diesen Tag überspringt)
+- Konkrete Empfehlung was der Lernende jetzt tun soll
+
+3. Committen & pushen auf `main`
+
+---
+
 ## Workflow: Neue Transkripte hinzugefügt
 
 Wenn gesagt wird "ich habe neue Transkripte hinzugefügt" oder Dateien in `/knowledge/videos/` erkennbar neu sind:
