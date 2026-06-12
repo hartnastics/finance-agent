@@ -1,0 +1,130 @@
+# Übersicht Tag 6 — Break of Structure
+**Erstellt:** 2026-06-12 | **Quelle:** knowledge/videos/TJR-Traiding/Bootcamp-Days/Tag6-Break of Structure
+
+---
+
+## Überblick
+
+Tag 6 ist der dritte technische Tag und das fehlende Verbindungsstück zwischen Kerzen (Tag 2) und Trends (Tag 4): **Wann und warum wechselt ein Markt seine Richtung?** Der Tag definiert präzise, was ein Hoch und Tief ist, was einen echten Strukturbruch ausmacht, was kein Strukturbruch ist (der häufigste Anfängerfehler), und wie die Zeitrahmen-Hierarchie dabei gilt.
+
+---
+
+## Teilgebiete
+
+### 1. Definition: Was ist ein Hoch und ein Tief?
+
+Bevor ein Strukturbruch erkannt werden kann, muss die Grundlage stimmen:
+
+| Begriff | Definition |
+|---------|-----------|
+| **Hoch** | Eine Aufwärtsbewegung, gefolgt von einer Abwärtsbewegung — zwei Kerzen genügen |
+| **Tief** | Eine Abwärtsbewegung, gefolgt von einer Aufwärtsbewegung — zwei Kerzen genügen |
+
+- Ein Hoch wird am **höchsten Docht** der beteiligten Kerzen markiert
+- Ein Tief wird am **niedrigsten Docht** der beteiligten Kerzen markiert
+- Die Form muss nicht "schön" sein — es reicht die strukturelle Logik
+
+---
+
+### 2. Was ist ein Break of Structure?
+
+Ein Break of Structure (BoS) ist ein **Trendwechsel** — und zwar dann, wenn der bestehende Trend seine Struktur nicht mehr aufrechterhalten kann.
+
+| Ausgangslage | Strukturbruch | Bedeutung |
+|-------------|--------------|-----------|
+| Aufwärtstrend (höhere Hochs, höhere Tiefs) | Kerze schließt **unter dem jüngsten Tief** | Trendwechsel nach unten |
+| Abwärtstrend (niedrigere Hochs, niedrigere Tiefs) | Kerze schließt **über dem jüngsten Hoch** | Trendwechsel nach oben |
+
+**Goldene Regel: Nur der Kerzenschluss zählt — niemals ein Docht.**
+
+---
+
+### 3. Was ist KEIN Strukturbruch — der häufigste Fehler
+
+Ein langer Docht, der unter ein Tief oder über ein Hoch ragt, ist **kein** Strukturbruch.
+
+- 90% der Retail-Trader würden in diesem Moment reagieren — und falsch liegen
+- Ein solcher Docht ist oft ein **Liquiditätssweep**: Der Kurs holt Stops ab und kehrt sofort um
+- Erst wenn der **Kerzenkörper** jenseits des Hochs/Tiefs schließt, ist es ein echter Strukturbruch
+
+---
+
+### 4. Schritt-für-Schritt-Checkliste für einen Strukturbruch
+
+1. Trend identifizieren (höhere/niedrigere Hochs & Tiefs)
+2. Im Aufwärtstrend: Tiefs beobachten / Im Abwärtstrend: Hochs beobachten
+3. Nur das **jüngste** Hoch oder Tief ist relevant — ältere ignorieren
+4. Auf Kerzenschluss warten: Schließt die Kerze jenseits dieses Punktes?
+5. Wenn ja: Strukturbruch bestätigt
+
+---
+
+### 5. Konsolidierung — wenn kein Strukturbruch möglich ist
+
+Manchmal wechseln Hochs und Tiefs ohne klaren Trend ab. Das ist Konsolidierung — der Markt weiß nicht, wohin er will. In dieser Phase:
+- Kein klarer Strukturbruch erkennbar
+- Kein guter Einstieg vorhanden
+- Abwarten ist die richtige Entscheidung
+
+---
+
+### 6. Zeitrahmen-Hierarchie beim Strukturbruch
+
+Ein Strukturbruch auf dem Tageschart, während der Wochenchart noch bullisch ist, bedeutet nur eine Korrektur im übergeordneten Aufwärtstrend — kein echter langfristiger Trendwechsel. Höhere Zeitrahmen haben immer mehr Gewicht.
+
+---
+
+## Zusammenhang der Teilgebiete
+
+Kerzen (Tag 2) zeigen, was in einer einzelnen Zeiteinheit passiert. Trends (Tag 4) zeigen die übergeordnete Richtung. Der Strukturbruch (Tag 6) ist das Bindeglied: Er signalisiert, wann ein Trend endet und ein neuer beginnt. Ohne Strukturbrüche weiß man nicht, wann man in eine neue Richtung einsteigen darf — man tradet blind. Mit dem Strukturbruch hat man die erste echte Einstiegslogik.
+
+---
+
+## Goldene Regeln aus diesem Tag
+
+- **Nur der Kerzenschluss zählt** — ein Docht über/unter ein Level ist kein Strukturbruch
+- **Nur das jüngste Hoch/Tief beobachten** — alte Strukturpunkte sind nicht mehr relevant
+- **Dochte ohne Schluss = Liquiditätssweep, kein Trendwechsel** — genau das, woran 90% der Anfänger scheitern
+- **Konsolidierung = Hände weg** — kein Strukturbruch, kein Trade
+- **Höhere Zeitrahmen entscheiden** — ein BoS auf dem 15m im Kontext eines bullischen 4H ist nur eine Korrektur
+
+---
+
+## Aufgaben
+
+### Aus dem Video
+- **10 echte Strukturbrüche** auf dem eigenen Chart finden — anhand der Checkliste aus dem Tag überprüft
+- **10 Fakes** finden — Momente, wo ein Docht scheinbar über/unter ein Level reichte, der Kurs aber nicht schloss und kein echter Strukturbruch folgte
+- Gesamt: 20 Beispiele (10 echt, 10 falsch) — mit Screenshots und Beschriftung
+
+### Von Claude erstellt
+- **Strukturbruch-Protokoll anlegen:** Erstelle eine Tabelle mit Spalten: Datum | Instrument | Zeitrahmen | Art (bullisch/bärisch) | War es echt? | Was passierte danach? Fülle diese für die 20 gesuchten Beispiele aus. Dieses Protokoll wird später nützlich sein, wenn du Strukturbrüche mit Liquidität kombinierst.
+- **Docht vs. Schluss testen:** Suche 5 Beispiele, wo ein langer Docht unter ein Tief ragt, aber der Kurs danach wieder stark steigt. Beschrifte genau: Wo war der Docht? Wo hat der Kurs geschlossen? Was ist danach passiert? Ziel: Den Unterschied zwischen echtem Bruch und Liquiditätssweep im Chart visuell verankern.
+- **Konsolidierungs-Erkennung:** Suche auf dem 1H-Chart eine Phase, in der Hochs und Tiefs abwechselnd höher und niedriger werden (kein klarer Trend). Markiere den Beginn und das Ende dieser Phase. Was kam danach? In welche Richtung wurde die Konsolidierung aufgelöst?
+- **Zeitrahmen-Check:** Nimm einen Strukturbruch auf dem 15m-Chart und überprüfe ihn auf dem 1H- und dem 4H-Chart. Bestätigt der übergeordnete Trend den Bruch — oder ist er nur eine Korrektur? Notiere: "Ich hätte getradet / nicht getradet — weil..."
+
+---
+
+## Was könnte noch fehlen?
+
+- Der Unterschied zwischen einem Strukturbruch und einem Change of Character (CHOCH) — kommt in fortgeschrittenen Konzepten
+- Wie viele Kerzen nach einem Strukturbruch man auf einen Einstieg warten sollte
+- Kombination von Strukturbruch mit Liquiditätssweep (kommt Tag 8–12)
+- Was passiert, wenn ein Strukturbruch direkt an einem wichtigen Level auftritt
+
+---
+
+## Fazit
+
+Tag 6 liefert das erste vollständige Werkzeug für einen konkreten Einstieg: Kenne den Trend (Tag 4), lese die Kerze (Tag 2), warte auf den Strukturbruch (Tag 6). Damit hat man bereits eine logisch fundierte Einstiegsentscheidung — ohne Indikatoren, ohne Raten.
+
+**Wichtigste Erkenntnis:** Die meisten Anfänger verlieren Geld, weil sie auf Dochte reagieren statt auf Kerzenschlüsse. Dieser eine Unterschied ist der Beginn von disziplinierter Analyse.
+
+**Risikobewertung:** Wer Strukturbrüche nicht versteht, wird Liquiditätssweeps (Tag 8–12) falsch interpretieren und genau dann einsteigen, wenn der Markt eine Falle stellt.
+
+**Empfehlung für dich als Lernender:**
+Mache alle 20 Beispiele (10 echt, 10 falsch). Das Auge muss trainiert werden, den Unterschied zwischen einem echten Schluss und einem täuschenden Docht sofort zu erkennen — das geht nur durch wiederholtes Sehen im echten Chart.
+
+---
+
+*Quelle: knowledge/videos/TJR-Traiding/Bootcamp-Days/Tag6-Break of Structure*

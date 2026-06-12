@@ -1,0 +1,128 @@
+# Übersicht Tag 13 — Risikomanagement
+**Erstellt:** 2026-06-12 | **Quelle:** knowledge/videos/TJR-Traiding/Bootcamp-Days/Tag13-Risikomanagement
+
+---
+
+## Überblick
+
+Tag 13 behandelt das letzte große Fundament vor der vollständigen Trade-Ausführung: **Risikomanagement**. Der Tag klärt, wie viel man pro Trade riskieren darf, wie viele Trades pro Tag sinnvoll sind, warum man im ersten Jahr mit Verlusten rechnen muss, und warum die Fähigkeit immer vor dem Geld kommen muss. Es ist der erste Tag mit konkreten Prozent-Regeln, die direkt in jeden Trade einfließen.
+
+---
+
+## Teilgebiete
+
+### 1. Realitäts-Check — erstes Jahr ist Lernzeit
+
+Direkte Aussage: Im ersten Jahr werden die meisten Geld verlieren. Vielleicht auch im zweiten.
+
+- Das sind **Studiengebühren** — die Frage ist nur: wie wenig kann man dabei verlieren?
+- Demo-Konto: Dort lernen, dort verlieren, dort die Psychologie trainieren
+- Übergang Demo → Live: Erste Woche emotional schwierig, aber das Fundament ist da
+
+---
+
+### 2. Die 1–3%-Regel pro Trade
+
+**Kernregel: Pro Trade maximal 1–3% des Kontostands riskieren.**
+
+| Risiko pro Trade | Anzahl Verluste bis Konto leer | Realismus |
+|-----------------|-------------------------------|-----------|
+| 1% | 100 aufeinanderfolgende Verluste | Praktisch unmöglich |
+| 3% | ~33 aufeinanderfolgende Verluste | Sehr unwahrscheinlich |
+| 20% | 5 aufeinanderfolgende Verluste | Passiert regelmäßig |
+
+Wer mit 1% riskiert und 80% seiner Trades verliert, hat am Jahresende noch 20% seines Startkapitals. Das ist besser als alles in zwei Wochen zu verbrennen.
+
+**Berechnung:** Lot-Size-Rechner oder Position-Size-Rechner (Google: "lot size calculator" oder "position size calculator") — für jedes Instrument individuell berechnen.
+
+---
+
+### 3. Maximales Tagesrisiko: 1–3% gesamt
+
+Nicht nur pro Trade, sondern als **Tageslimit**:
+
+- 2 Trades mit je 1,5% = 3% Tagesrisiko → Tageslimit erreicht
+- Kein weiterer Trade an diesem Tag, egal wie gut das Setup aussieht
+- Manche Tage: kein gutes Setup → gar kein Trade → 0% Risiko → vollkommen in Ordnung
+
+**Übertrading ist einer der häufigsten und zerstörerischsten Fehler.** Wer mehr tradet als geplant, hat seine Regeln gebrochen — ob der Trade gewinnt oder nicht.
+
+---
+
+### 4. Konto behandeln wie 200.000 Dollar
+
+Unabhängig von der aktuellen Kontogröße:
+
+- Würde man mit 200.000 Dollar 20–30% pro Trade riskieren? Nein.
+- Würde man 10 Trades am Tag eingehen? Nein.
+- Also warum mit einem kleinen Konto?
+- Die Disziplin früh zu lernen ist der Unterschied zwischen späterem Erfolg und Misserfolg
+
+---
+
+### 5. Fähigkeit kommt vor Geld
+
+Wer nur auf Geld aus ist, lernt die Fähigkeit nicht — und ohne Fähigkeit kommt kein nachhaltiges Geld:
+
+- Wer weiß, wohin ein Chart sich bewegt, hat einen echten Vorteil
+- Dieser Vorteil setzt voraus, dass die Fähigkeit wirklich erlernt wurde
+- Kein Overleveln, kein Overtrading, kein Hoffen auf den einen großen Trade
+
+---
+
+## Zusammenhang der Teilgebiete
+
+Verluste akzeptieren (Tag 11) + Risikomanagement (Tag 13) = die praktische Umsetzung von Disziplin (Tag 3). Ohne die 1–3%-Regel ist der emotionalste Trader irgendwann pleite. Mit ihr überlebt man auch eine schlechte Phase und hat die Zeit, sich zu verbessern. Das Tagesrisiko-Limit ergänzt die Trade-Regel: Es verhindert, dass ein schlechter Tag komplett außer Kontrolle gerät.
+
+---
+
+## Goldene Regeln aus diesem Tag
+
+- **1–3% des Kontos pro Trade riskieren** — nicht mehr, immer
+- **1–3% des Kontos als Tageslimit** — kein Trade mehr nach Erreichen der Grenze
+- **Im ersten Jahr Geld verlieren ist normal** — Ziel ist: so wenig wie möglich verlieren
+- **Konto behandeln wie 200.000 Dollar** — unabhängig von der tatsächlichen Größe
+- **Fähigkeit vor Geld** — wer die Fähigkeit hat, kommt automatisch zum Geld
+- **Übertrading ist eine Regelverletzung** — egal ob der Trade gewinnt
+
+---
+
+## Aufgaben
+
+### Aus dem Video
+- Recherchiere, wie das Risiko für dein Instrument berechnet wird
+- Suchbegriff: **"Lot size calculator"** oder **"Position size calculator"**
+- Finde heraus: Wie viele Lots/Kontrakte benötige ich, um bei einem bestimmten Stop-Loss genau 1% meines Kontos zu riskieren?
+- Das Ergebnis schriftlich ins Journal eintragen
+
+### Von Claude erstellt
+- **Risiko-Rechner kennenlernen:** Gehe auf myfxbook.com/tools/position-size-calculator oder eine vergleichbare Seite. Berechne für folgendes Beispiel: Konto 1.000 Dollar, Risiko 1%, Stop-Loss 20 Pips auf EUR/USD — wie viele Lots? Dann das gleiche mit 2% und 3%. Diese drei Zahlen ins Journal.
+- **Übertrading-Analyse:** Denke an eine Situation (im Leben oder Trading), wo du "noch einen Versuch" gemacht hast, nachdem etwas schiefgelaufen ist. Was war das Ergebnis? Schreibe in 3 Sätzen auf, warum dieser Impuls existiert — und was die Konsequenz wäre, wenn dieser Impuls beim Trading immer gefolgt würde.
+- **Trading-Plan Grundstruktur:** Schreibe einen einfachen Trading-Plan mit folgenden Punkten: (1) Instrument, auf dem ich trade, (2) Zeitfenster, in dem ich trade, (3) Maximales Risiko pro Trade, (4) Maximales Tagesrisiko, (5) Maximale Anzahl Trades pro Tag, (6) Was passiert nach dem ersten Verlust? Dieser Plan gilt ab sofort — auf dem Demo-Konto.
+- **200.000-Dollar-Test:** Stell dir vor, dein Demo-Konto hat 200.000 Dollar. Öffne deinen Chart. Wie viele Trades würdest du heute machen? Mit wie viel Risiko? Schreibe die Antwort auf — und handle ab sofort so, als wäre das Geld echt.
+
+---
+
+## Was könnte noch fehlen?
+
+- Stop-Loss-Platzierung (kommt mit Order Blocks und Fair Value Gaps)
+- Risiko-Rendite-Verhältnis (R:R) — Mindestanforderungen für einen gültigen Trade
+- Wie man Gewinne skaliert ohne die Regeln zu brechen (partiell schließen, Trailing Stop)
+- Psychologische Unterschiede zwischen Demo und Live (Emotionen bei echtem Geld)
+
+---
+
+## Fazit
+
+Tag 13 gibt die einzige Zahl, die beim Trading immer bekannt sein muss: **Wie viel riskiere ich?** Alles andere — Setups, Einstiege, Ausstiege — ist wertlos, wenn diese Frage nicht beantwortet ist. Risikomanagement ist der Schutzwall, der das Konto am Leben hält, bis die Fähigkeit das Geld zurückbringt.
+
+**Wichtigste Erkenntnis:** 1–3% pro Trade sind nicht konservativ — sie sind das Fundament jeder nachhaltigen Trading-Karriere. Wer diese Regel bricht, verbrennt sein Konto, bevor er die Fähigkeit entwickelt hat, es zurückzuverdienen.
+
+**Risikobewertung:** Wer diesen Tag überspringt und ohne Risikomanagement tradet, wird sein Konto in der ersten schlechten Phase verlieren — unabhängig davon, wie gut sein Setup ist.
+
+**Empfehlung für dich als Lernender:**
+Schreibe deinen Trading-Plan heute. Füge die 1–3%-Regel als absolute Grenze ein. Beginne ab sofort, auf dem Demo-Konto ausschließlich nach diesem Plan zu handeln. Das Ziel ist nicht Profit — das Ziel ist Regelkonformität.
+
+---
+
+*Quelle: knowledge/videos/TJR-Traiding/Bootcamp-Days/Tag13-Risikomanagement*
