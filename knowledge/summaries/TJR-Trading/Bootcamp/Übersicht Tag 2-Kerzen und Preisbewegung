@@ -1,0 +1,130 @@
+# Übersicht Tag 2 — Kerzen & Preisbewegung
+**Erstellt:** 2026-06-12 | **Quelle:** knowledge/videos/TJR-Traiding/Bootcamp-Days/Tag2-Kerzen und Preisbewegung
+
+---
+
+## Überblick
+
+Tag 2 ist der erste technische Tag des Bootcamps. Der Fokus liegt auf dem Fundament jeder Chart-Analyse: **Candlesticks (Kerzen)** lesen und verstehen. Kein Indikator, kein komplexes Muster — nur eine Kerze und was sie über den Markt erzählt. Der Inhalt gliedert sich in: **Aufbau einer Kerze**, **relevante Kerzenmuster**, **Interpretation von Dochten** und **die wichtigste Grundregel beim Traden**.
+
+---
+
+## Teilgebiete
+
+### 1. Aufbau einer Kerze — die Grundsprache des Marktes
+
+Jede Kerze besteht aus zwei Elementen:
+- **Körper:** Abstand zwischen Eröffnungs- und Schlusskurs
+- **Dochte (Schatten):** Zeigen die höchsten und tiefsten Punkte, die der Kurs innerhalb des Zeitrahmens erreicht hat — ohne dort zu schließen
+
+| Kerzentyp | Eröffnung | Schlusskurs | Bedeutung |
+|-----------|-----------|-------------|-----------|
+| **Bullisch (grün)** | Unten | Oben | Kurs ist gestiegen |
+| **Bärisch (rot)** | Oben | Unten | Kurs ist gefallen |
+
+**Zeitrahmen:** Eine 5-Minuten-Kerze zeigt exakt 5 Minuten Preisbewegung — Eröffnung, Hoch, Tief, Schluss. Zeitrahmen wählbar: 1m, 2m, 5m, 15m, 1h, 4h, 1D usw.
+
+**Kernaussage:** Dochte sind wie eine Schneckenspur — sie zeigen, wohin der Kurs innerhalb der Kerze gereist ist, ohne dort zu verbleiben. Sie lügen nicht.
+
+---
+
+### 2. Kerzenmuster — was zählt und was nicht
+
+**Abgelehnte Muster (zu komplex, zu unzuverlässig):**
+- Doppelter Boden / Doppeltes Top
+- Kopf-Schulter
+- W-Muster / M-Muster
+- Alle Muster mit mehr als zwei Kerzen
+
+**Akzeptierte Muster (einzelne Kerzen mit echter Aussagekraft):**
+
+| Muster | Beschreibung | Aussage |
+|--------|-------------|---------|
+| **Doji** | Kleiner Körper, kurze Dochte | Unentschlossenheit im Markt |
+| **Long-Legged Doji** | Kleiner Körper, sehr lange Dochte | Starke Unentschlossenheit, Richtungswechsel möglich |
+| **Cross Doji** | Kreuzförmig, Dochte in beide Richtungen | Gleichgewicht zwischen Käufern & Verkäufern |
+| **Inverse Cross Doji** | Umgekehrte Kreuzform | Gleichgewicht, oft vor Ausbruch |
+| **Dragonfly Doji** | Kein oberer Docht, langer unterer Docht | Käufer haben Kontrolle zurückgewonnen |
+| **Hammer** | Kleiner Körper oben, langer unterer Docht | Bullisches Umkehrsignal nach Abverkauf |
+
+**Warum diese Kerzen?** Weil sie zeigen, **wo der Kurs abgelehnt wurde** — und das ist die einzige Information, die für eine Handelsentscheidung relevant ist.
+
+---
+
+### 3. Dochte lesen — drei Praxisbeispiele
+
+**Beispiel 1 — Langer oberer Docht:**
+- Kurs öffnet tief, steigt stark, schließt aber wieder tief
+- Bedeutung: Käufer haben gepusht, aber Verkäufer haben sie zurückgedrückt
+- Wahrscheinlich wurde Liquidität nach oben abgeholt → anschließende Ablehnung
+- **Signal:** Bärisch, Shortmöglichkeit
+
+**Beispiel 2 — Doji mit langem unterem Docht:**
+- Kurs wird stark nach unten gedrückt, schließt aber kaum tiefer als Eröffnung
+- Bedeutung: Verkäufer hatten Momentum, verlieren es aber — Erschöpfung der Bären
+- Bestätigung: Konsolidierung oder leichte Aufwärtsbewegung folgt
+- **Signal:** Bärisches Momentum lässt nach → mögliche Umkehr
+
+**Beispiel 3 — Gold Tageschart:**
+- Langer unterer Docht, winziger oberer Docht, Kurs schließt weit oben
+- Bedeutung: Extremes Kaufinteresse — Markt hat tief gedrückt, Käufer übernahmen vollständig
+- Was folgte: Kurs rallierte und nahm die nächsten Hochs mit
+- **Signal:** Extrem bullisch, Kaufsignal
+
+---
+
+### 4. Die wichtigste Grundregel
+
+> **Wir traden nur auf Basis von Kerzen, die bereits geschlossen haben — nie auf Basis einer sich noch bildenden Kerze.**
+
+- Häufigster Anfängerfehler: Entscheidungen auf Basis einer Kerze in Entstehung treffen
+- Die Kerze kann sich bis zum Schluss komplett verändern
+- Gilt für alle Setups: Break of Structure, Kerzenmuster, Signale — immer erst nach Kerzenschluss handeln
+
+---
+
+### 5. Hausaufgaben Tag 2
+
+1. Chart öffnen (S&P, GU, GJ oder eigenes Instrument)
+2. Mindestens **10 Doji-Kerzen oder Kerzen mit langen Dochten** finden
+3. Für jede Kerze: Screenshot + Beschriftung + **wie hat der Kurs danach reagiert?**
+4. Ziel: Verstehen, dass Kerzenschlüsse Bedeutung haben und Dochte Richtung zeigen
+
+---
+
+## Zusammenhang der Teilgebiete
+
+Kerzen (1) sind die Sprache des Marktes. Ohne sie zu lesen, ist jede weitere Analyse blind. Die Muster (2) sind nicht willkürlich — sie basieren ausschließlich auf der Logik der Dochte (3). Und die Grundregel (4) schützt davor, auf unfertige Information zu reagieren. Alles zusammen formt das erste echte Trading-Werkzeug: **Preis lesen, bevor man handelt.**
+
+---
+
+## Goldene Regeln aus diesem Tag
+
+- **Dochte lügen nicht** — sie zeigen exakt, wo der Markt abgelehnt hat
+- **Keine Kerzenmuster mit mehr als zwei Kerzen** — zu komplex, zu unzuverlässig
+- **Niemals auf eine noch offene Kerze traden** — warten bis sie geschlossen hat
+- **Eine Kerze erzählt die ganze Geschichte** — wer sie lesen kann, braucht keine Indikatoren
+- **Ablehnung ist Information** — ein langer Docht nach oben ist kein Zufall, sondern ein Signal
+
+---
+
+## Was könnte noch fehlen?
+
+- Unterschied zwischen Dochten in verschiedenen Zeitrahmen (15m vs. 1D)
+- Wie Kerzenmuster mit Levels (Support/Resistance) kombiniert werden — kommt in späteren Tags
+- Wann eine Kerze "stark genug" ist, um darauf zu reagieren (Körpergröße, Volumen)
+
+---
+
+## Fazit
+
+Tag 2 liefert das absolute Basiswerkzeug für alles Folgende. Wer Kerzen nicht versteht, kann keinen einzigen der späteren Konzepte (Liquidität, Fair Value Gaps, Break of Structure) sauber anwenden — denn alle basieren auf der Fähigkeit, Preisbewegung innerhalb von Kerzen zu lesen.
+
+**Risikobewertung:** Wer dieses Fundament überspringt und direkt zu "fortgeschrittenen" Konzepten springt, wird diese falsch anwenden und mit unnötigem Risiko traden.
+
+**Empfehlung für dich als Lernender:**
+Mach die Hausaufgabe wirklich. 10 Kerzen suchen, screenshotten, beschriften, Reaktion danach notieren. Das dauert 30 Minuten — und danach siehst du Charts nie mehr gleich.
+
+---
+
+*Quelle: knowledge/videos/TJR-Traiding/Bootcamp-Days/Tag2-Kerzen und Preisbewegung*
