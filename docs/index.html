@@ -303,11 +303,213 @@
     .checklist li:last-child { border-bottom: none; }
     .check { font-size: 16px; }
 
+    /* BOOTCAMP */
+    .bootcamp-layout {
+      display: flex;
+      gap: 0;
+      min-height: calc(100vh - 120px);
+    }
+
+    .bootcamp-nav {
+      width: 230px;
+      flex-shrink: 0;
+      border-right: 1px solid var(--border);
+      padding: 0 0 24px 0;
+      position: sticky;
+      top: 0;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    .bootcamp-nav-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: 12px 14px 8px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 4px;
+    }
+
+    .day-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      width: 100%;
+      border: none;
+      background: none;
+      cursor: pointer;
+      text-align: left;
+      border-radius: 0;
+      transition: background 0.12s;
+      border-left: 3px solid transparent;
+    }
+
+    .day-btn:hover { background: var(--surface2); }
+    .day-btn.active { background: rgba(79,142,247,0.1); border-left-color: var(--accent); }
+
+    .day-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      min-width: 20px;
+      font-family: monospace;
+    }
+
+    .day-btn.active .day-num { color: var(--accent); }
+
+    .day-label {
+      font-size: 12px;
+      color: var(--muted);
+      flex: 1;
+      line-height: 1.3;
+    }
+
+    .day-btn.active .day-label { color: var(--text); }
+
+    .day-type {
+      font-size: 9px;
+      font-weight: 600;
+      padding: 2px 5px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+    .type-tech { background: rgba(79,142,247,0.15); color: var(--accent); }
+    .type-psych { background: rgba(124,58,237,0.15); color: #a78bfa; }
+    .type-check { background: rgba(245,158,11,0.15); color: var(--yellow); }
+
+    .bootcamp-content {
+      flex: 1;
+      padding: 0 0 32px 28px;
+      min-width: 0;
+    }
+
+    .day-content { display: none; }
+    .day-content.active { display: block; }
+
+    .day-header {
+      padding: 20px 0 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    .day-header-tag {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .day-header h2 { font-size: 22px; font-weight: 700; }
+
+    .bc-section-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 22px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+    }
+    .bc-section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+
+    .bc-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .bc-card {
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+    }
+    .bc-card-blue { background: rgba(79,142,247,0.06); border-color: rgba(79,142,247,0.2); }
+    .bc-card-green { background: rgba(34,197,94,0.06); border-color: rgba(34,197,94,0.2); }
+    .bc-card-yellow { background: rgba(245,158,11,0.06); border-color: rgba(245,158,11,0.2); }
+    .bc-card-red { background: rgba(239,68,68,0.06); border-color: rgba(239,68,68,0.2); }
+    .bc-card .bc-card-icon { font-size: 20px; margin-bottom: 6px; }
+    .bc-card h4 { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+    .bc-card p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+    .bc-rules {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .bc-rule {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      background: var(--surface2);
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .bc-rule::before {
+      content: '⚡';
+      flex-shrink: 0;
+    }
+
+    .bc-tasks {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .bc-task-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .bc-task-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 8px 14px;
+    }
+
+    .bc-task-video { background: rgba(79,142,247,0.1); color: var(--accent); }
+    .bc-task-claude { background: rgba(124,58,237,0.1); color: #a78bfa; }
+
+    .bc-task-list {
+      padding: 10px 14px 12px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .bc-task-list li {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
       .grid-3 { grid-template-columns: 1fr; }
     }
+    @media (max-width: 900px) {
+      .bootcamp-layout { flex-direction: column; }
+      .bootcamp-nav { width: 100%; max-height: none; position: static; border-right: none; border-bottom: 1px solid var(--border); overflow-x: auto; white-space: nowrap; display: flex; flex-direction: row; flex-wrap: wrap; }
+      .bootcamp-content { padding: 16px 0 0 0; }
+      .bc-grid-2 { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 600px) {
       .sidebar { display: none; }
       .main { margin-left: 0; padding: 16px; }
@@ -328,6 +530,7 @@
     <button class="nav-item" onclick="showPage('portfolio')">💼 &nbsp;Portfolio</button>
     <button class="nav-item" onclick="showPage('knowledge')">📚 &nbsp;Knowledge-Base</button>
     <button class="nav-item" onclick="showPage('calculator')">🧮 &nbsp;Zinseszins-Rechner</button>
+    <button class="nav-item" onclick="showPage('bootcamp')">🎯 &nbsp;TJR Bootcamp</button>
   </nav>
 
   <!-- MAIN CONTENT -->
@@ -946,6 +1149,930 @@
       </div>
     </div>
 
+    <!-- BOOTCAMP PAGE -->
+    <div id="page-bootcamp" class="page">
+      <div class="page-header">
+        <h1>TJR Trading Bootcamp</h1>
+        <p>13 Tage — Technische Analyse · Psychologie · Risikomanagement</p>
+      </div>
+
+      <div class="bootcamp-layout">
+        <!-- DAY NAV -->
+        <div class="bootcamp-nav">
+          <div class="bootcamp-nav-title">📅 Tage</div>
+          <button class="day-btn active" onclick="showDay(1,this)">
+            <span class="day-num">01</span>
+            <span class="day-label">Einführung &amp; Mentalität</span>
+            <span class="day-type type-psych">Psycho</span>
+          </button>
+          <button class="day-btn" onclick="showDay(2,this)">
+            <span class="day-num">02</span>
+            <span class="day-label">Kerzen &amp; Preisbewegung</span>
+            <span class="day-type type-tech">Technik</span>
+          </button>
+          <button class="day-btn" onclick="showDay(3,this)">
+            <span class="day-num">03</span>
+            <span class="day-label">Disziplin &amp; Gewohnheiten</span>
+            <span class="day-type type-psych">Psycho</span>
+          </button>
+          <button class="day-btn" onclick="showDay(4,this)">
+            <span class="day-num">04</span>
+            <span class="day-label">Trends</span>
+            <span class="day-type type-tech">Technik</span>
+          </button>
+          <button class="day-btn" onclick="showDay(5,this)">
+            <span class="day-num">05</span>
+            <span class="day-label">Zielsetzung</span>
+            <span class="day-type type-psych">Psycho</span>
+          </button>
+          <button class="day-btn" onclick="showDay(6,this)">
+            <span class="day-num">06</span>
+            <span class="day-label">Break of Structure</span>
+            <span class="day-type type-tech">Technik</span>
+          </button>
+          <button class="day-btn" onclick="showDay(7,this)">
+            <span class="day-num">07</span>
+            <span class="day-label">Individualität</span>
+            <span class="day-type type-psych">Psycho</span>
+          </button>
+          <button class="day-btn" onclick="showDay(8,this)">
+            <span class="day-num">08</span>
+            <span class="day-label">Liquidität Teil 1</span>
+            <span class="day-type type-tech">Technik</span>
+          </button>
+          <button class="day-btn" onclick="showDay(9,this)">
+            <span class="day-num">09</span>
+            <span class="day-label">Check-in &amp; Pause</span>
+            <span class="day-type type-check">Check-in</span>
+          </button>
+          <button class="day-btn" onclick="showDay(10,this)">
+            <span class="day-num">10</span>
+            <span class="day-label">Liquidität Teil 2</span>
+            <span class="day-type type-tech">Technik</span>
+          </button>
+          <button class="day-btn" onclick="showDay(11,this)">
+            <span class="day-num">11</span>
+            <span class="day-label">Verluste akzeptieren</span>
+            <span class="day-type type-psych">Psycho</span>
+          </button>
+          <button class="day-btn" onclick="showDay(12,this)">
+            <span class="day-num">12</span>
+            <span class="day-label">Liquidität Teil 3</span>
+            <span class="day-type type-tech">Technik</span>
+          </button>
+          <button class="day-btn" onclick="showDay(13,this)">
+            <span class="day-num">13</span>
+            <span class="day-label">Risikomanagement</span>
+            <span class="day-type type-tech">Technik</span>
+          </button>
+        </div>
+
+        <!-- DAY CONTENT -->
+        <div class="bootcamp-content">
+
+          <!-- TAG 1 -->
+          <div id="day-1" class="day-content active">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-psych">Psychologie</span> &nbsp; Tag 1</div>
+                <h2>Einführung &amp; Mentalität</h2>
+                <p style="color:var(--muted);margin-top:6px">Kein Trading-Inhalt — aber das wichtigste Fundament für alles Folgende.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">🧠 Kernthemen</div>
+            <div class="bc-grid-2">
+              <div class="bc-card bc-card-blue">
+                <div class="bc-card-icon">📋</div>
+                <h4>Der Vertrag</h4>
+                <p>Trading lernen kostet täglich <strong>eine Stunde</strong> — konsequent, jeden Tag. Kein Rosinenpicken. Hausaufgaben sind Pflicht.</p>
+              </div>
+              <div class="bc-card bc-card-red">
+                <div class="bc-card-icon">🚫</div>
+                <h4>Die Illusion</h4>
+                <p>"100 % Trefferquote", Signal-Gruppen, 5.000 $ Kurse — alles gelogen. <strong>Vergiss alles bisher gelernte</strong> und fange von vorne an.</p>
+              </div>
+              <div class="bc-card bc-card-green">
+                <div class="bc-card-icon">📈</div>
+                <h4>Markterfahrung</h4>
+                <p>Kein Kurs ersetzt Zeit im Markt. Echtes Verständnis entsteht durch <strong>eigene Beobachtung</strong>, nicht durch Theorie.</p>
+              </div>
+              <div class="bc-card bc-card-yellow">
+                <div class="bc-card-icon">📓</div>
+                <h4>Journal — Pflicht</h4>
+                <p>Ab Tag 1: Trading-Journal führen. Jedes Video, jede Analyse dokumentieren. <strong>Kein Journal = kein Fortschritt messbar.</strong></p>
+              </div>
+            </div>
+            <div class="bc-section-title">🥇 Goldene Regeln</div>
+            <div class="bc-rules">
+              <div class="bc-rule">Lösch alle Indikatoren — lern zuerst den nackten Markt zu lesen</div>
+              <div class="bc-rule">Ein Journal führen ist keine Option — es ist die einzige Methode echten Fortschritt zu messen</div>
+              <div class="bc-rule">Vergiss alles bisherige Trading-Wissen — falsches Fundament macht jeden Aufbau instabil</div>
+              <div class="bc-rule">Konsequenz schlägt Talent — wer jeden Tag einen Schritt macht, überholt alle die auf den perfekten Moment warten</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Lösch TikTok / Instagram falls du dort täglich über 1 Stunde verbringst — ersetze diese Zeit durch das Bootcamp</li>
+                  <li>Starte heute dein Trading-Journal: Was habe ich gelernt? Was war unklar? Was wende ich morgen an?</li>
+                  <li>Schau dieses Video ein zweites Mal — beim ersten nimmt man Stimmung auf, beim zweiten Inhalt</li>
+                </ul>
+              </div>
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-claude">Von Claude</div>
+                <ul class="bc-task-list">
+                  <li>Bildschirmzeit-Check: Öffne die Bildschirmzeit auf deinem Handy — schreibe die Zahl auf Seite 1 deines Journals</li>
+                  <li>Journal-Setup: Datum, warum du Trading lernen willst, wo du in 6 Monaten stehen möchtest</li>
+                  <li>Schreib 3 Dinge auf die du über Trading "wusstest" — daneben: "Vergessen." Das ist dein Reset-Moment</li>
+                  <li>Beobachtungsaufgabe: TradingView öffnen, EUR/USD oder S&amp;P 500, 5m-Chart, 15 Min beobachten ohne zu handeln</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 2 -->
+          <div id="day-2" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-tech">Technik</span> &nbsp; Tag 2</div>
+                <h2>Kerzen &amp; Preisbewegung</h2>
+                <p style="color:var(--muted);margin-top:6px">Die Grundsprache des Marktes — ohne Kerzen lesen ist jede weitere Analyse blind.</p>
+              </div>
+            </div>
+
+            <div class="bc-section-title">🕯️ Aufbau einer Kerze</div>
+            <div style="display:flex;gap:24px;align-items:center;margin-bottom:20px;flex-wrap:wrap">
+              <svg width="260" height="180" viewBox="0 0 260 180" style="flex-shrink:0">
+                <!-- Bullische Kerze -->
+                <text x="50" y="20" fill="#64748b" font-size="11" text-anchor="middle" font-family="sans-serif">Bullisch</text>
+                <line x1="50" y1="25" x2="50" y2="50" stroke="#22c55e" stroke-width="2"/>
+                <rect x="30" y="50" width="40" height="70" fill="#22c55e" rx="2"/>
+                <line x1="50" y1="120" x2="50" y2="155" stroke="#22c55e" stroke-width="2"/>
+                <text x="95" y="40" fill="#64748b" font-size="10" font-family="sans-serif">← Oberer Docht (Hoch)</text>
+                <text x="95" y="72" fill="#22c55e" font-size="10" font-family="sans-serif">← Schlusskurs</text>
+                <text x="95" y="100" fill="#22c55e" font-size="10" font-family="sans-serif">← Körper</text>
+                <text x="95" y="128" fill="#22c55e" font-size="10" font-family="sans-serif">← Eröffnungskurs</text>
+                <text x="95" y="158" fill="#64748b" font-size="10" font-family="sans-serif">← Unterer Docht (Tief)</text>
+                <!-- Bärische Kerze -->
+                <text x="200" y="20" fill="#64748b" font-size="11" text-anchor="middle" font-family="sans-serif">Bärisch</text>
+                <line x1="200" y1="25" x2="200" y2="50" stroke="#ef4444" stroke-width="2"/>
+                <rect x="180" y="50" width="40" height="70" fill="#ef4444" rx="2"/>
+                <line x1="200" y1="120" x2="200" y2="155" stroke="#ef4444" stroke-width="2"/>
+              </svg>
+              <div style="flex:1;min-width:200px">
+                <table style="width:100%;font-size:13px;border-collapse:collapse">
+                  <thead><tr style="border-bottom:1px solid var(--border)">
+                    <th style="padding:6px 8px;text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase">Typ</th>
+                    <th style="padding:6px 8px;text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase">Eröffnung</th>
+                    <th style="padding:6px 8px;text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase">Schluss</th>
+                    <th style="padding:6px 8px;text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase">Bedeutung</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr style="border-bottom:1px solid var(--border)"><td style="padding:8px;color:#22c55e;font-weight:600">Bullisch</td><td style="padding:8px">Unten</td><td style="padding:8px">Oben</td><td style="padding:8px">Kurs gestiegen</td></tr>
+                    <tr><td style="padding:8px;color:#ef4444;font-weight:600">Bärisch</td><td style="padding:8px">Oben</td><td style="padding:8px">Unten</td><td style="padding:8px">Kurs gefallen</td></tr>
+                  </tbody>
+                </table>
+                <div style="margin-top:12px;padding:10px 12px;background:rgba(79,142,247,0.08);border-left:3px solid var(--accent);border-radius:4px;font-size:13px">
+                  <strong>Dochte lügen nicht</strong> — sie zeigen exakt, wohin der Kurs innerhalb der Kerze gereist ist, ohne dort zu schließen. Wie eine Schneckenspur.
+                </div>
+              </div>
+            </div>
+
+            <div class="bc-section-title">📊 Wichtige Kerzenmuster</div>
+            <div style="overflow-x:auto;margin-bottom:20px">
+              <table style="width:100%;font-size:13px;border-collapse:collapse;border:1px solid var(--border);border-radius:8px;overflow:hidden">
+                <thead style="background:var(--surface2)">
+                  <tr>
+                    <th style="padding:10px 14px;text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase">Muster</th>
+                    <th style="padding:10px 14px;text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase">Beschreibung</th>
+                    <th style="padding:10px 14px;text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase">Signal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;font-weight:600">Doji</td><td style="padding:10px 14px;color:var(--muted)">Kleiner Körper, kurze Dochte</td><td style="padding:10px 14px"><span class="badge badge-yellow">Unentschlossenheit</span></td></tr>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;font-weight:600">Long-Legged Doji</td><td style="padding:10px 14px;color:var(--muted)">Kleiner Körper, sehr lange Dochte</td><td style="padding:10px 14px"><span class="badge badge-yellow">Starke Unentschlossenheit</span></td></tr>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;font-weight:600">Dragonfly Doji</td><td style="padding:10px 14px;color:var(--muted)">Kein oberer Docht, langer unterer Docht</td><td style="padding:10px 14px"><span class="badge badge-green">Käufer übernehmen</span></td></tr>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;font-weight:600">Hammer</td><td style="padding:10px 14px;color:var(--muted)">Kleiner Körper oben, langer unterer Docht</td><td style="padding:10px 14px"><span class="badge badge-green">Bullische Umkehr</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="padding:10px 14px;background:rgba(239,68,68,0.08);border-left:3px solid var(--red);border-radius:4px;font-size:13px;margin-bottom:20px">
+              <strong>Abgelehnt:</strong> Doppelter Boden, Kopf-Schulter, W/M-Muster — alle Muster mit mehr als zwei Kerzen sind zu komplex und unzuverlässig.
+            </div>
+
+            <div class="bc-section-title">⚡ Die wichtigste Grundregel</div>
+            <div style="padding:16px 20px;background:rgba(79,142,247,0.1);border:1px solid var(--accent);border-radius:var(--radius);font-size:15px;font-weight:600;margin-bottom:20px;text-align:center">
+              Wir traden NUR auf Basis von Kerzen, die bereits geschlossen haben — nie auf Basis einer noch offenen Kerze.
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Dochte lügen nicht — sie zeigen exakt wo der Markt abgelehnt hat</div>
+              <div class="bc-rule">Keine Kerzenmuster mit mehr als zwei Kerzen — zu komplex, zu unzuverlässig</div>
+              <div class="bc-rule">Niemals auf eine noch offene Kerze traden — warten bis sie geschlossen hat</div>
+              <div class="bc-rule">Ablehnung ist Information — ein langer Docht nach oben ist kein Zufall, sondern ein Signal</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Chart öffnen (S&amp;P, GU, GJ oder eigenes Instrument)</li>
+                  <li>Mindestens <strong>10 Doji-Kerzen oder Kerzen mit langen Dochten</strong> finden</li>
+                  <li>Für jede Kerze: Screenshot + Beschriftung + wie hat der Kurs danach reagiert?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 3 -->
+          <div id="day-3" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-psych">Psychologie</span> &nbsp; Tag 3</div>
+                <h2>Disziplin &amp; Gewohnheiten</h2>
+                <p style="color:var(--muted);margin-top:6px">Motivation hält 7 Tage. Disziplin hält ein Leben lang.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">⚖️ Motivation vs. Disziplin</div>
+            <div style="overflow-x:auto;margin-bottom:20px">
+              <table style="width:100%;font-size:13px;border-collapse:collapse;border:1px solid var(--border);border-radius:8px;overflow:hidden">
+                <thead style="background:var(--surface2)">
+                  <tr>
+                    <th style="padding:10px 14px;text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase">Eigenschaft</th>
+                    <th style="padding:10px 14px;text-align:left;color:var(--yellow);font-size:11px;text-transform:uppercase">Motivation</th>
+                    <th style="padding:10px 14px;text-align:left;color:var(--accent);font-size:11px;text-transform:uppercase">Disziplin</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;color:var(--muted)">Dauer</td><td style="padding:10px 14px;color:var(--yellow)">~7 Tage</td><td style="padding:10px 14px;color:var(--accent)">Dauerhaft</td></tr>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;color:var(--muted)">Quelle</td><td style="padding:10px 14px;color:var(--yellow)">Extern (Video, Rede)</td><td style="padding:10px 14px;color:var(--accent)">Innere Entscheidung</td></tr>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;color:var(--muted)">Verlässlichkeit</td><td style="padding:10px 14px;color:var(--yellow)">Unzuverlässig</td><td style="padding:10px 14px;color:var(--accent)">Konstant</td></tr>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;color:var(--muted)">Ergebnis</td><td style="padding:10px 14px;color:var(--yellow)">Kurzfristiger Antrieb</td><td style="padding:10px 14px;color:var(--accent)">Langfristige Veränderung</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bc-section-title">🔄 Gewohnheiten — die Mechanik</div>
+            <div style="display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap">
+              <div style="flex:1;min-width:140px;background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.3);border-radius:var(--radius);padding:16px;text-align:center">
+                <div style="font-size:32px;font-weight:800;color:var(--accent)">21</div>
+                <div style="font-size:13px;color:var(--muted);margin-top:4px">Tage bis zur <strong style="color:var(--text)">Gewohnheit</strong></div>
+              </div>
+              <div style="flex:1;min-width:140px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.3);border-radius:var(--radius);padding:16px;text-align:center">
+                <div style="font-size:32px;font-weight:800;color:var(--green)">60</div>
+                <div style="font-size:13px;color:var(--muted);margin-top:4px">Tage bis zur <strong style="color:var(--text)">natürlichen Routine</strong></div>
+              </div>
+              <div style="flex:2;min-width:200px;background:var(--surface2);border-radius:var(--radius);padding:16px">
+                <strong style="font-size:14px">Die Eine-Gewohnheit-Regel</strong>
+                <p style="font-size:13px;color:var(--muted);margin-top:8px">Wähle eine einzige Gewohnheit außerhalb der Komfortzone. Täglich, ohne Ausnahme. Nicht zehn auf einmal — das überfordert.</p>
+              </div>
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Motivation hält ~7 Tage — Disziplin hält ein Leben lang</div>
+              <div class="bc-rule">21 Tage für eine Gewohnheit, 60 Tage für eine Routine — täglich, ohne Ausnahme</div>
+              <div class="bc-rule">Nie mehr als eine neue Gewohnheit gleichzeitig starten — Fokus schlägt Quantität</div>
+              <div class="bc-rule">Die Gewohnheit muss außerhalb der Komfortzone liegen — Komfort verändert nichts</div>
+              <div class="bc-rule">Wer nicht aufgibt, kann nicht dauerhaft verlieren — die einzige Niederlage ist das Aufhören</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Eine Gewohnheit außerhalb der Komfortzone wählen — <strong>heute starten</strong>, nicht morgen</li>
+                  <li>Fortschritt dokumentieren (Journal oder Video-Tagebuch)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 4 -->
+          <div id="day-4" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-tech">Technik</span> &nbsp; Tag 4</div>
+                <h2>Trends</h2>
+                <p style="color:var(--muted);margin-top:6px">Der übergeordnete Kontext — ohne Trendverständnis ist jeder Einstieg ein Münzwurf.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">📈 Die drei Bewegungsarten</div>
+            <div style="display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap">
+              <div style="flex:1;min-width:160px">
+                <svg width="100%" viewBox="0 0 160 100" style="display:block">
+                  <polyline points="10,85 35,65 60,50 85,35 110,20 135,10" stroke="#22c55e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <circle cx="10" cy="85" r="3" fill="#22c55e"/><circle cx="60" cy="50" r="3" fill="#22c55e"/><circle cx="135" cy="10" r="3" fill="#22c55e"/>
+                  <text x="80" y="98" fill="#22c55e" font-size="11" text-anchor="middle" font-family="sans-serif" font-weight="600">Aufwärtstrend</text>
+                  <text x="80" y="110" fill="#64748b" font-size="9" text-anchor="middle" font-family="sans-serif">Höhere Hochs &amp; Tiefs</text>
+                </svg>
+              </div>
+              <div style="flex:1;min-width:160px">
+                <svg width="100%" viewBox="0 0 160 110" style="display:block">
+                  <polyline points="10,10 35,25 60,42 85,58 110,74 135,88" stroke="#ef4444" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <circle cx="10" cy="10" r="3" fill="#ef4444"/><circle cx="60" cy="42" r="3" fill="#ef4444"/><circle cx="135" cy="88" r="3" fill="#ef4444"/>
+                  <text x="80" y="102" fill="#ef4444" font-size="11" text-anchor="middle" font-family="sans-serif" font-weight="600">Abwärtstrend</text>
+                  <text x="80" y="113" fill="#64748b" font-size="9" text-anchor="middle" font-family="sans-serif">Niedrigere Hochs &amp; Tiefs</text>
+                </svg>
+              </div>
+              <div style="flex:1;min-width:160px">
+                <svg width="100%" viewBox="0 0 160 110" style="display:block">
+                  <polyline points="10,55 30,40 50,55 70,42 90,58 110,44 135,56" stroke="#f59e0b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <line x1="10" y1="35" x2="145" y2="35" stroke="#64748b" stroke-width="1" stroke-dasharray="4"/>
+                  <line x1="10" y1="70" x2="145" y2="70" stroke="#64748b" stroke-width="1" stroke-dasharray="4"/>
+                  <text x="80" y="90" fill="#f59e0b" font-size="11" text-anchor="middle" font-family="sans-serif" font-weight="600">Konsolidierung</text>
+                  <text x="80" y="102" fill="#64748b" font-size="9" text-anchor="middle" font-family="sans-serif">Seitwärts — kein Trade</text>
+                </svg>
+              </div>
+            </div>
+            <div class="bc-section-title">🔭 Zeitrahmen-Hierarchie</div>
+            <div style="background:var(--surface2);border-radius:var(--radius);padding:16px;margin-bottom:20px">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+                <div style="background:rgba(79,142,247,0.2);border-radius:6px;padding:6px 12px;font-size:13px;font-weight:600;color:var(--accent)">4H / Daily</div>
+                <div style="color:var(--accent);font-size:18px">→</div>
+                <div style="font-size:13px;color:var(--muted)">Übergeordneter Trend — das ist die Richtung</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="background:rgba(34,197,94,0.1);border-radius:6px;padding:6px 12px;font-size:13px;font-weight:600;color:var(--green)">15m / 5m</div>
+                <div style="color:var(--green);font-size:18px">→</div>
+                <div style="font-size:13px;color:var(--muted)">Optimierter Einstieg in Richtung des übergeordneten Trends</div>
+              </div>
+              <div style="margin-top:12px;padding:10px 12px;background:rgba(239,68,68,0.08);border-left:3px solid var(--red);border-radius:4px;font-size:13px">
+                ⚠️ <strong>Fehler:</strong> Auf dem 15m-Chart Long gehen, während 4H/Daily bärisch ist = gegen den Trend traden
+              </div>
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Der Trend ist dein Freund — trade immer in Richtung des Momentums</div>
+              <div class="bc-rule">Höhere Zeitrahmen schlagen niedrigere Zeitrahmen — der 4H/Daily-Trend entscheidet</div>
+              <div class="bc-rule">Konsolidierung = kein Trade — warten bis Volumen eine Richtung entscheidet</div>
+              <div class="bc-rule">Erst Richtung klären, dann Einstieg suchen — ohne Trendanalyse ist jeder Trade ein Münzwurf</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Ein bis zwei Instrumente wählen (S&amp;P 500, Gold, GJ, GU — nicht mehr!)</li>
+                  <li>Wöchentlicher Zeitrahmen → Wohin will der Kurs diese Woche?</li>
+                  <li>Tageschart → Richtung dieser Woche bestimmen</li>
+                  <li>Aktueller Zeitrahmen → Richtung heute</li>
+                  <li>Optional: TradingView Forecast-Tool — nur Richtung einzeichnen, kein Stop-Loss</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 5 -->
+          <div id="day-5" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-psych">Psychologie</span> &nbsp; Tag 5</div>
+                <h2>Zielsetzung</h2>
+                <p style="color:var(--muted);margin-top:6px">Ziele ohne Schritte sind nur Träume. Ein 3-Stufen-System das wirklich funktioniert.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">🎯 Das 3-Stufen-System</div>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px">
+              <div style="display:flex;gap:14px;align-items:flex-start;padding:16px;background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.2);border-radius:var(--radius)">
+                <div style="width:36px;height:36px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;color:#fff">1</div>
+                <div>
+                  <strong>3 langfristige Endziele</strong> (10+ Jahre, unrealistisch fühlend)
+                  <p style="font-size:13px;color:var(--muted);margin-top:4px">Mindestens eines muss Trading-bezogen sein. Wenn es sich nicht unrealistisch anfühlt — ist es zu klein.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:14px;align-items:flex-start;padding:16px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);border-radius:var(--radius)">
+                <div style="width:36px;height:36px;background:var(--accent2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;color:#fff">2</div>
+                <div>
+                  <strong>10 kurzfristige Schritte pro Ziel</strong> (= 30 Schritte gesamt)
+                  <p style="font-size:13px;color:var(--muted);margin-top:4px">Täglich dem Plan folgen · Risikomanagement anwenden · Journal führen · Diese Woche profitabel sein</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:14px;align-items:flex-start;padding:16px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius)">
+                <div style="width:36px;height:36px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;color:#fff">3</div>
+                <div>
+                  <strong>Täglich 5× laut aussprechen</strong> — als "Ich bin..." oder "Ich werde..."
+                  <p style="font-size:13px;color:var(--muted);margin-top:4px">Nicht "Ich will profitabel traden" → "Ich <em>bin</em> ein profitabler Trader." Das Unterbewusstsein reagiert auf Überzeugung, nicht auf Wünsche.</p>
+                </div>
+              </div>
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Ziele ohne Schritte sind nur Träume — jedes große Ziel braucht 10 kleine tägliche Schritte</div>
+              <div class="bc-rule">"Ich bin..." schlägt "Ich will..." — Formulierung im Präsens mit Überzeugung, nicht als Wunsch</div>
+              <div class="bc-rule">Täglich aufschreiben, lesen, aussprechen — nicht einmal die Woche, sondern jeden Morgen</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Notizbuch kaufen (falls noch keins vorhanden)</li>
+                  <li>3 langfristige Endziele aufschreiben</li>
+                  <li>Für jedes Ziel 10 kurzfristige Schritte = 30 Schritte gesamt</li>
+                  <li>Ab heute täglich: Ziele mindestens 5× laut aussprechen als "Ich bin..." / "Ich werde..."</li>
+                  <li>Jeden Morgen Ziele neu aufschreiben — lesen, schreiben, aussprechen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 6 -->
+          <div id="day-6" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-tech">Technik</span> &nbsp; Tag 6</div>
+                <h2>Break of Structure</h2>
+                <p style="color:var(--muted);margin-top:6px">Wann und warum wechselt der Markt seine Richtung? Das fehlende Verbindungsstück.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">📍 Hochs &amp; Tiefs definieren</div>
+            <div style="display:flex;gap:24px;margin-bottom:20px;flex-wrap:wrap">
+              <svg width="100%" viewBox="0 0 400 150" style="max-width:420px;flex-shrink:0">
+                <!-- Aufwärtstrend mit BoS -->
+                <polyline points="20,120 55,90 75,100 110,65 130,78 165,40 185,55 220,20" stroke="#22c55e" stroke-width="2" fill="none"/>
+                <!-- Tiefs markiert -->
+                <line x1="55" y1="88" x2="55" y2="130" stroke="#ef4444" stroke-width="1" stroke-dasharray="3"/>
+                <line x1="110" y1="63" x2="110" y2="130" stroke="#ef4444" stroke-width="1" stroke-dasharray="3"/>
+                <line x1="165" y1="38" x2="165" y2="130" stroke="#ef4444" stroke-width="1" stroke-dasharray="3"/>
+                <text x="55" y="140" fill="#64748b" font-size="9" text-anchor="middle" font-family="sans-serif">Tief 1</text>
+                <text x="110" y="140" fill="#64748b" font-size="9" text-anchor="middle" font-family="sans-serif">Tief 2</text>
+                <text x="165" y="140" fill="#64748b" font-size="9" text-anchor="middle" font-family="sans-serif">Tief 3</text>
+                <!-- BoS nach unten -->
+                <polyline points="220,20 250,45 270,30 300,75 330,60 370,110" stroke="#ef4444" stroke-width="2" fill="none" stroke-dasharray="5"/>
+                <line x1="220" y1="20" x2="385" y2="20" stroke="#64748b" stroke-width="1" stroke-dasharray="4"/>
+                <text x="240" y="15" fill="#f59e0b" font-size="9" font-family="sans-serif">letztes Hoch</text>
+                <!-- BoS Label -->
+                <rect x="280" y="70" width="85" height="22" rx="4" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1"/>
+                <text x="322" y="84" fill="#ef4444" font-size="10" text-anchor="middle" font-family="sans-serif" font-weight="600">BoS nach unten</text>
+              </svg>
+              <div style="flex:1;min-width:200px">
+                <div class="bc-card bc-card-blue" style="margin-bottom:10px">
+                  <strong style="font-size:13px">Was ist ein Hoch?</strong>
+                  <p style="font-size:12px;margin-top:4px;color:var(--muted)">Aufwärtsbewegung gefolgt von Abwärtsbewegung. Markiert am höchsten Docht.</p>
+                </div>
+                <div class="bc-card bc-card-blue">
+                  <strong style="font-size:13px">Was ist ein Tief?</strong>
+                  <p style="font-size:12px;margin-top:4px;color:var(--muted)">Abwärtsbewegung gefolgt von Aufwärtsbewegung. Markiert am niedrigsten Docht.</p>
+                </div>
+              </div>
+            </div>
+            <div class="bc-section-title">✅ Checkliste — Echter Strukturbruch</div>
+            <div style="background:var(--surface2);border-radius:var(--radius);padding:16px;margin-bottom:16px">
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
+                <li style="display:flex;gap:10px;font-size:13px"><span style="color:var(--accent)">①</span> Trend identifizieren (höhere/niedrigere Hochs &amp; Tiefs)</li>
+                <li style="display:flex;gap:10px;font-size:13px"><span style="color:var(--accent)">②</span> Im Aufwärtstrend: Tiefs beobachten / Im Abwärtstrend: Hochs beobachten</li>
+                <li style="display:flex;gap:10px;font-size:13px"><span style="color:var(--accent)">③</span> Nur das <strong>jüngste</strong> Hoch oder Tief ist relevant</li>
+                <li style="display:flex;gap:10px;font-size:13px"><span style="color:var(--accent)">④</span> Kerzenschluss: Schließt die Kerze jenseits dieses Punktes? → BoS bestätigt</li>
+              </ul>
+            </div>
+            <div style="padding:12px 16px;background:rgba(239,68,68,0.1);border:1px solid var(--red);border-radius:var(--radius);font-size:13px;margin-bottom:20px">
+              <strong style="color:var(--red)">⚠️ Häufigster Fehler:</strong> Ein Docht der über/unter ein Level ragt ist <strong>kein</strong> Strukturbruch. Nur der Kerzenkörper-<em>schluss</em> zählt. Ein Docht ohne Schluss = Liquiditätssweep (Falle für Retail-Trader).
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Nur der Kerzenschluss zählt — ein Docht über/unter ein Level ist kein Strukturbruch</div>
+              <div class="bc-rule">Nur das jüngste Hoch/Tief beobachten — alte Strukturpunkte sind nicht mehr relevant</div>
+              <div class="bc-rule">Dochte ohne Schluss = Liquiditätssweep, kein Trendwechsel</div>
+              <div class="bc-rule">Konsolidierung = Hände weg — kein Strukturbruch, kein Trade</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li><strong>10 echte Strukturbrüche</strong> auf dem Chart finden — anhand der Checkliste überprüft</li>
+                  <li><strong>10 Fakes</strong> finden — Momente wo ein Docht scheinbar über/unter ein Level reichte, der Kurs aber nicht schloss</li>
+                  <li>Gesamt: 20 Beispiele (10 echt, 10 falsch) mit Screenshots und Beschriftung</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 7 -->
+          <div id="day-7" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-psych">Psychologie</span> &nbsp; Tag 7</div>
+                <h2>Individualität</h2>
+                <p style="color:var(--muted);margin-top:6px">Eine Woche im Bootcamp. Kein Rennen gegen andere — ein Rennen gegen dich selbst.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">🧬 Individualität im Trading</div>
+            <div class="bc-grid-2">
+              <div class="bc-card bc-card-blue">
+                <div class="bc-card-icon">🔍</div>
+                <h4>Eigene Strategie entwickeln</h4>
+                <p>Wenn eine Strategie nach langer ehrlicher Anwendung nicht klickt — erzwinge sie nicht. Kombiniere Elemente verschiedener Ansätze zu etwas Eigenem.</p>
+              </div>
+              <div class="bc-card bc-card-green">
+                <div class="bc-card-icon">🏁</div>
+                <h4>Rennen gegen dich selbst</h4>
+                <p>Vergleich mit anderen Lernenden destabilisiert die Psychologie. Was zählt: Machst du heute einen Schritt vorwärts?</p>
+              </div>
+              <div class="bc-card bc-card-yellow">
+                <div class="bc-card-icon">💪</div>
+                <h4>Selbstvertrauen = Trading-Fähigkeit</h4>
+                <p>Wer im Alltag nicht eigenständig entscheidet, kann im Markt nicht allein stehen. Millionen von Tradern nehmen die Gegenseite — du brauchst Überzeugung.</p>
+              </div>
+              <div class="bc-card bc-card-red">
+                <div class="bc-card-icon">🚫</div>
+                <h4>Kopiere niemanden blind</h4>
+                <p>Das Ziel ist nicht, wie TJR zu sein oder in Puerto Rico zu leben. Tu, was <em>du</em> willst. Nicht was andere wollen.</p>
+              </div>
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Kopiere keine Strategie blind — entwickle deine eigene durch Beobachtung und Kombination</div>
+              <div class="bc-rule">Trading ist ein Rennen gegen dich selbst — vergleiche dich nie mit anderen Lernenden</div>
+              <div class="bc-rule">Selbstvertrauen im Leben = Selbstvertrauen im Trading — sie können nicht getrennt werden</div>
+              <div class="bc-rule">Wer die Zustimmung anderer braucht, ist nicht bereit fürs Trading — man muss allein stehen können</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Heute rausgehen und vollständig du selbst sein — Outfit, Meinung, Entscheidungen</li>
+                  <li>Wenn jemand fragt warum: "Weil ich es will." Keine weitere Erklärung</li>
+                  <li>Im Journal dokumentieren: Wie hat sich das angefühlt? Was haben andere gesagt?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 8 -->
+          <div id="day-8" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-tech">Technik</span> &nbsp; Tag 8</div>
+                <h2>Liquidität — Teil 1</h2>
+                <p style="color:var(--muted);margin-top:6px">Das wichtigste Konzept der gesamten Strategie. Das "Warum" hinter jeder Kursbewegung.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">💧 Was ist Liquidität?</div>
+            <div style="display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap">
+              <div style="flex:1;min-width:200px;background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.25);border-radius:var(--radius);padding:16px">
+                <div style="font-size:22px;margin-bottom:8px">💰</div>
+                <strong>Liquidität = ruhende Orders</strong>
+                <p style="font-size:13px;color:var(--muted);margin-top:6px">An bestimmten Preispunkten liegen <strong>Stop-Loss-Orders</strong> (Schutz) und <strong>Limit-Orders</strong> (Einstiege) gleichzeitig. Das ist ein Liquiditätspool.</p>
+              </div>
+              <div style="flex:1;min-width:200px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:var(--radius);padding:16px">
+                <div style="font-size:22px;margin-bottom:8px">🏦</div>
+                <strong>Warum Institutionen das brauchen</strong>
+                <p style="font-size:13px;color:var(--muted);margin-top:6px">Banken haben riesige Orders. Um eine Milliarden-Position aufzubauen, brauchen sie massenhaft Gegenpositionen — diese holen sie sich durch <strong>Liquiditätssweeps</strong>.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">🔄 Der Liquiditätssweep-Mechanismus</div>
+            <div style="background:var(--surface2);border-radius:var(--radius);padding:16px;margin-bottom:20px">
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div style="display:flex;gap:12px;align-items:center"><div style="width:28px;height:28px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px;flex-shrink:0">1</div><span style="font-size:13px">Liquiditätspool über einem Hoch identifiziert (viele Orders dort)</span></div>
+                <div style="display:flex;gap:12px;align-items:center"><div style="width:28px;height:28px;background:var(--accent2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px;flex-shrink:0">2</div><span style="font-size:13px">Institutionen treiben den Kurs gezielt dorthin — Stops werden ausgelöst</span></div>
+                <div style="display:flex;gap:12px;align-items:center"><div style="width:28px;height:28px;background:var(--yellow);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-weight:700;font-size:12px;flex-shrink:0">3</div><span style="font-size:13px">Institutionen füllen ihre eigenen großen Orders an diesem Punkt</span></div>
+                <div style="display:flex;gap:12px;align-items:center"><div style="width:28px;height:28px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px;flex-shrink:0">4</div><span style="font-size:13px">Markt dreht in die neue Richtung — wir sehen Strukturbruch als Bestätigung</span></div>
+              </div>
+            </div>
+            <div style="padding:12px 16px;background:rgba(245,158,11,0.08);border-left:3px solid var(--yellow);border-radius:4px;font-size:13px;margin-bottom:20px">
+              <strong>Wichtig:</strong> Liquidität allein ist kein Einstieg. Immer auf <strong>Bestätigung durch Strukturbruch</strong> warten. Ohne Bestätigung — kein Trade.
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Liquidität ist das "Warum" hinter jeder Kursbewegung — kein Zufall, sondern institutionelle Order-Füllung</div>
+              <div class="bc-rule">Institutionen brauchen Gegenpositionen — sie holen sich diese durch Liquiditätssweeps</div>
+              <div class="bc-rule">Wer denkt wie die Marktbeweger, tradet wie die Marktbeweger</div>
+              <div class="bc-rule">Support &amp; Resistance ohne Kontext ist Raten — Liquidität gibt den Grund an</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Dieses Video <strong>3–4 Mal ansehen</strong> bis das Konzept vollständig verstanden ist</li>
+                  <li>Kein weiterer technischer Schritt heute — das Konzept muss sitzen bevor Teil 2 beginnt</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 9 -->
+          <div id="day-9" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-check">Check-in</span> &nbsp; Tag 9</div>
+                <h2>Check-in &amp; Pause</h2>
+                <p style="color:var(--muted);margin-top:6px">Eine Woche abgeschlossen. Erholung ist kein Zeichen von Schwäche — sie ist Teil des Lernprozesses.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">📊 Realitäts-Check</div>
+            <div style="display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap">
+              <div style="flex:1;min-width:180px;text-align:center;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:var(--radius);padding:20px">
+                <div style="font-size:40px;font-weight:800;color:var(--red)">~20.000</div>
+                <div style="font-size:13px;color:var(--muted);margin-top:6px">aktive Teilnehmer</div>
+              </div>
+              <div style="flex:1;min-width:180px;text-align:center;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:20px">
+                <div style="font-size:40px;font-weight:800;color:var(--green)">100–200</div>
+                <div style="font-size:13px;color:var(--muted);margin-top:6px">werden wirklich profitabel</div>
+              </div>
+              <div style="flex:2;min-width:200px;background:var(--surface2);border-radius:var(--radius);padding:16px;display:flex;align-items:center">
+                <p style="font-size:13px;color:var(--muted)">Das ist keine Entmutigung — es ist ein <strong style="color:var(--text)">Aufruf</strong>. Entscheide aktiv, zur Minderheit zu gehören. Was du <em>nach</em> dem Bootcamp machst, entscheidet mehr als das Bootcamp selbst.</p>
+              </div>
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Mindestens einen Tag pro Woche komplett pausieren — Analyse-Lähmung ist real</div>
+              <div class="bc-rule">Profitabilität kommt nach dem Bootcamp, nicht währenddessen — realistische Erwartungen</div>
+              <div class="bc-rule">Verarbeitung braucht Zeit — Pausen sind Teil des Lernens, nicht das Gegenteil davon</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li><strong>Keine Hausaufgaben heute</strong> — aktive Erholungspause</li>
+                  <li>Charts weglegen, Kopf durchlüften</li>
+                  <li>Optional: Wochenrückblick im Journal — was hat sich festgesetzt? Was ist noch unklar?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 10 -->
+          <div id="day-10" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-tech">Technik</span> &nbsp; Tag 10</div>
+                <h2>Liquidität — Teil 2</h2>
+                <p style="color:var(--muted);margin-top:6px">Wo liegt Liquidität auf dem Chart — und warum genau dort?</p>
+              </div>
+            </div>
+            <div class="bc-section-title">📍 Wo liegt Liquidität?</div>
+            <div style="margin-bottom:20px">
+              <svg width="100%" viewBox="0 0 500 180" style="max-width:520px;display:block;margin:0 auto">
+                <!-- Aufwärtstrend -->
+                <polyline points="20,150 60,120 80,132 115,95 135,108 175,65 195,80 235,35" stroke="#22c55e" stroke-width="2" fill="none"/>
+                <!-- Hoch markiert -->
+                <line x1="235" y1="35" x2="480" y2="35" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5"/>
+                <text x="240" y="28" fill="#ef4444" font-size="10" font-family="sans-serif" font-weight="600">Liquiditätspool über Hoch</text>
+                <!-- Orders Marker -->
+                <text x="300" y="32" fill="#ef4444" font-size="9" font-family="sans-serif">Buy-Stops + Short-Stops = riesige Order-Menge</text>
+                <!-- Sweep -->
+                <polyline points="235,35 260,18 285,40" stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="4"/>
+                <circle cx="260" cy="18" r="4" fill="#f59e0b"/>
+                <text x="265" y="14" fill="#f59e0b" font-size="9" font-family="sans-serif">SWEEP</text>
+                <!-- Abfall danach -->
+                <polyline points="285,40 320,80 355,65 400,120 440,105 480,145" stroke="#ef4444" stroke-width="2" fill="none"/>
+                <!-- Labels -->
+                <text x="400" y="170" fill="#64748b" font-size="9" font-family="sans-serif" text-anchor="middle">Institutionen haben Short gefüllt → Markt dreht</text>
+              </svg>
+            </div>
+            <div class="bc-grid-2">
+              <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:var(--radius);padding:14px">
+                <strong style="font-size:13px;color:var(--red)">Über Hochs im Aufwärtstrend:</strong>
+                <ul style="margin-top:8px;padding-left:16px;font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px">
+                  <li>Buy-Stops (Trendfolgend)</li>
+                  <li>Short Stop-Losses (Absicherung)</li>
+                  <li>→ Institutionen füllen dort ihre <strong style="color:var(--text)">Sell-Position</strong></li>
+                </ul>
+              </div>
+              <div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius);padding:14px">
+                <strong style="font-size:13px;color:var(--green)">Unter Tiefs im Abwärtstrend:</strong>
+                <ul style="margin-top:8px;padding-left:16px;font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px">
+                  <li>Sell-Stops (Trendfolgend)</li>
+                  <li>Long Stop-Losses (Absicherung)</li>
+                  <li>→ Institutionen füllen dort ihre <strong style="color:var(--text)">Buy-Position</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div style="margin-top:16px;padding:12px 16px;background:rgba(245,158,11,0.08);border-left:3px solid var(--yellow);border-radius:4px;font-size:13px">
+              <strong>Warum Trading so schwer ist:</strong> Retail-Trader haben oft die richtige Richtungsidee — werden aber genau im falschen Moment durch den institutionellen Sweep herausgeworfen. Dann läuft der Markt wie erwartet — aber ohne sie.
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Über Hochs und unter Tiefs liegt immer Liquidität — zwei Arten von Orders gleichzeitig</div>
+              <div class="bc-rule">Retail hat oft recht — und wird trotzdem rausgeworfen — das ist der institutionelle Prozess</div>
+              <div class="bc-rule">Das Muster ist auf jedem Zeitrahmen und jedem Instrument — keine Ausnahme</div>
+              <div class="bc-rule">Sweep + Strukturbruch = Bestätigung — erst dann ist ein Einstieg gerechtfertigt</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Chart nach eigener Wahl öffnen (Gold, GJ, GU, S&amp;P)</li>
+                  <li><strong>5 Liquiditätssweeps auf drei verschiedenen Zeitrahmen</strong> finden = 15 Beispiele</li>
+                  <li>Garantiert: Wenn keine gefunden werden → Vorgehen nochmal überdenken — sie sind überall</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 11 -->
+          <div id="day-11" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-psych">Psychologie</span> &nbsp; Tag 11</div>
+                <h2>Verluste akzeptieren</h2>
+                <p style="color:var(--muted);margin-top:6px">Die wichtigste Lektion — kommt kurz bevor die echte Trade-Ausführung beginnt.</p>
+              </div>
+            </div>
+            <div style="padding:16px 20px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:var(--radius);font-size:14px;margin-bottom:20px">
+              <strong>"Ich habe heute selbst 9.000 Dollar auf GU verloren. Habe ich danach Revenge-Trades gemacht? Nein. Habe ich überhebelt? Nein. Ich habe mich an meine Regeln gehalten und für heute aufgehört."</strong>
+            </div>
+            <div class="bc-section-title">🧠 Richtige vs. Falsche Reaktion auf Verluste</div>
+            <div style="overflow-x:auto;margin-bottom:20px">
+              <table style="width:100%;font-size:13px;border-collapse:collapse;border:1px solid var(--border);border-radius:8px;overflow:hidden">
+                <thead style="background:var(--surface2)">
+                  <tr>
+                    <th style="padding:10px 14px;text-align:left;color:var(--red);font-size:11px;text-transform:uppercase">❌ Falsch</th>
+                    <th style="padding:10px 14px;text-align:left;color:var(--green);font-size:11px;text-transform:uppercase">✅ Richtig</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;color:var(--muted)">Revenge-Trade — sofort zurückholen wollen</td><td style="padding:10px 14px;color:var(--muted)">Für heute aufhören — kein weiterer Trade</td></tr>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;color:var(--muted)">Überleveln — größere Position öffnen</td><td style="padding:10px 14px;color:var(--muted)">"Was lerne ich daraus?" — Verlust analysieren</td></tr>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;color:var(--muted)">Wut, Frustration, Markt beschuldigen</td><td style="padding:10px 14px;color:var(--muted)">Roboterhaft — dem Trading-Plan folgen</td></tr>
+                  <tr style="border-top:1px solid var(--border)"><td style="padding:10px 14px;color:var(--muted)">Tages- und Wochendenken</td><td style="padding:10px 14px;color:var(--muted)">Jahresdenken — ein Tag ist statistisch irrelevant</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Verluste sind Studiengebühren — man bezahlt für die Lektionen, Frage ist wie wenig</div>
+              <div class="bc-rule">Nach einem Verlust: für heute aufhören — kein Revenge-Trade, keine Emotion</div>
+              <div class="bc-rule">Handle wie ein Algorithmus — dem Trading-Plan folgen, emotionslos, systematisch</div>
+              <div class="bc-rule">Jahresweise denken — einzelne Verlusttage sind statistisch irrelevant</div>
+              <div class="bc-rule">Verantwortung für jeden Trade übernehmen — der Markt ist nie schuld</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Keine technischen Hausaufgaben</li>
+                  <li>Mentale Aufgabe: Blickwinkel auf Verluste aktiv verändern</li>
+                  <li>Beim nächsten Verlust (Demo oder in Gedanken): aufschreiben was gelernt werden kann</li>
+                </ul>
+              </div>
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-claude">Von Claude</div>
+                <ul class="bc-task-list">
+                  <li>5 feste Trading-Regeln aufschreiben die unter allen Umständen gelten — auch nach einem großen Verlust</li>
+                  <li>Verlust-Protokoll anlegen: Datum | Instrument | % Verlust | Was lerne ich? | Habe ich danach aufgehört?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 12 -->
+          <div id="day-12" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-tech">Technik</span> &nbsp; Tag 12</div>
+                <h2>Liquidität — Teil 3</h2>
+                <p style="color:var(--muted);margin-top:6px">Das vollständige Setup: Einstieg, Ziel und Bestätigung basierend auf Liquidität.</p>
+              </div>
+            </div>
+            <div class="bc-section-title">🧲 Das Magnet-Prinzip</div>
+            <div style="background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.25);border-radius:var(--radius);padding:16px;font-size:14px;margin-bottom:20px;text-align:center">
+              Prominente Hochs und Tiefs sind wie <strong>Magnete</strong> — der Kurs wird von ihnen angezogen, weil dort die Orders der Market Maker liegen.
+            </div>
+            <div class="bc-section-title">📐 Das vollständige Setup</div>
+            <div style="display:flex;flex-direction:column;gap:0;margin-bottom:20px">
+              <div style="display:flex;gap:0;align-items:stretch">
+                <div style="width:4px;background:var(--accent);border-radius:4px 4px 0 0;flex-shrink:0;margin:0 14px 0 8px"></div>
+                <div style="flex:1;padding:12px 0;border-bottom:1px solid var(--border)">
+                  <div style="display:flex;gap:12px;align-items:center">
+                    <span style="font-size:18px">①</span>
+                    <div><strong>Prominentes Hoch/Tief identifizieren</strong><br><span style="font-size:12px;color:var(--muted)">Nur Punkte die klar ins Auge springen — das ist die Liquiditätszone</span></div>
+                  </div>
+                </div>
+              </div>
+              <div style="display:flex;gap:0;align-items:stretch">
+                <div style="width:4px;background:var(--accent2);flex-shrink:0;margin:0 14px 0 8px"></div>
+                <div style="flex:1;padding:12px 0;border-bottom:1px solid var(--border)">
+                  <div style="display:flex;gap:12px;align-items:center">
+                    <span style="font-size:18px">②</span>
+                    <div><strong>Liquiditätssweep abwarten</strong><br><span style="font-size:12px;color:var(--muted)">Kurs touchiert die Zone kurz, schließt aber wieder darunter/darüber</span></div>
+                  </div>
+                </div>
+              </div>
+              <div style="display:flex;gap:0;align-items:stretch">
+                <div style="width:4px;background:var(--yellow);flex-shrink:0;margin:0 14px 0 8px"></div>
+                <div style="flex:1;padding:12px 0;border-bottom:1px solid var(--border)">
+                  <div style="display:flex;gap:12px;align-items:center">
+                    <span style="font-size:18px">③</span>
+                    <div><strong>Strukturbruch als Bestätigung</strong><br><span style="font-size:12px;color:var(--muted)">Kerzenschluss jenseits des jüngsten Hochs/Tiefs — Trendwechsel bestätigt</span></div>
+                  </div>
+                </div>
+              </div>
+              <div style="display:flex;gap:0;align-items:stretch">
+                <div style="width:4px;background:var(--green);border-radius:0 0 4px 4px;flex-shrink:0;margin:0 14px 0 8px"></div>
+                <div style="flex:1;padding:12px 0">
+                  <div style="display:flex;gap:12px;align-items:center">
+                    <span style="font-size:18px">④</span>
+                    <div><strong>Einstieg + Gewinnziel</strong><br><span style="font-size:12px;color:var(--muted)">Einstieg nach Bestätigung · Gewinnmitnahme an nächster prominenter Liquiditätszone</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:10px 14px;background:rgba(34,197,94,0.08);border-left:3px solid var(--green);border-radius:4px;font-size:13px;margin-bottom:20px">
+              <strong>Market Maker Logik:</strong> Kaufen an Tiefs, verkaufen an Hochs. Wir handeln nach derselben Logik — Einstieg nach Sweep, Gewinn an der nächsten Liquiditätszone.
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">Liquidität ist ein Magnet — prominente Hochs und Tiefs ziehen den Kurs an</div>
+              <div class="bc-rule">Sweep + Strukturbruch = Einstieg — nie nur auf den Sweep allein reagieren</div>
+              <div class="bc-rule">Gewinnmitnahmen an der nächsten Liquiditätszone — nicht willkürlich</div>
+              <div class="bc-rule">Nicht jedes Hoch/Tief ist relevant — nur prominente Strukturpunkte zählen</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>5 Liquiditätssweeps auf dem bevorzugten Instrument finden</li>
+                  <li>Diesmal auch beobachten was <em>danach</em> passierte: Gab es einen Strukturbruch? Wurde eine Imbalance gefüllt?</li>
+                  <li>Das vollständige Muster: <strong>Sweep → Strukturbruch → Imbalance/Order Block → Einstieg</strong></li>
+                </ul>
+              </div>
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-claude">Von Claude</div>
+                <ul class="bc-task-list">
+                  <li>Setup-Checkliste erstellen: □ Prominente Zone · □ Sweep stattgefunden · □ Kerzenschluss bestätigt · □ Strukturbruch in neue Richtung · □ Übergeordneter Trend stimmt überein</li>
+                  <li>Rückwärts analysieren: S&amp;P 500 oder Gold, letzte 6 Monate — 3 vollständige Setups finden und R:R berechnen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAG 13 -->
+          <div id="day-13" class="day-content">
+            <div class="day-header">
+              <div>
+                <div class="day-header-tag"><span class="day-type type-tech">Technik</span> &nbsp; Tag 13</div>
+                <h2>Risikomanagement</h2>
+                <p style="color:var(--muted);margin-top:6px">Die einzige Zahl die beim Trading immer bekannt sein muss: Wie viel riskiere ich?</p>
+              </div>
+            </div>
+            <div class="bc-section-title">📏 Die 1–3 % Regel</div>
+            <div style="display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap">
+              <div style="flex:1;min-width:140px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.3);border-radius:var(--radius);padding:16px;text-align:center">
+                <div style="font-size:36px;font-weight:800;color:var(--green)">1%</div>
+                <div style="font-size:13px;color:var(--muted);margin-top:6px">100 aufeinanderfolgende Verluste bis Konto leer</div>
+                <div style="margin-top:8px"><span class="badge badge-green">Sehr sicher</span></div>
+              </div>
+              <div style="flex:1;min-width:140px;background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.3);border-radius:var(--radius);padding:16px;text-align:center">
+                <div style="font-size:36px;font-weight:800;color:var(--accent)">2%</div>
+                <div style="font-size:13px;color:var(--muted);margin-top:6px">50 aufeinanderfolgende Verluste bis Konto leer</div>
+                <div style="margin-top:8px"><span class="badge badge-blue">Standard</span></div>
+              </div>
+              <div style="flex:1;min-width:140px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:var(--radius);padding:16px;text-align:center">
+                <div style="font-size:36px;font-weight:800;color:var(--yellow)">3%</div>
+                <div style="font-size:13px;color:var(--muted);margin-top:6px">33 aufeinanderfolgende Verluste bis Konto leer</div>
+                <div style="margin-top:8px"><span class="badge badge-yellow">Maximum</span></div>
+              </div>
+              <div style="flex:1;min-width:140px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.3);border-radius:var(--radius);padding:16px;text-align:center">
+                <div style="font-size:36px;font-weight:800;color:var(--red)">20%</div>
+                <div style="font-size:13px;color:var(--muted);margin-top:6px">5 aufeinanderfolgende Verluste bis Konto leer</div>
+                <div style="margin-top:8px"><span class="badge badge-red">Verboten</span></div>
+              </div>
+            </div>
+            <div class="bc-section-title">📅 Tagesrisiko-Limit</div>
+            <div style="background:var(--surface2);border-radius:var(--radius);padding:16px;margin-bottom:20px">
+              <div style="font-size:22px;font-weight:800;color:var(--accent);margin-bottom:8px;text-align:center">1–3% des Kontos pro Tag gesamt</div>
+              <div style="display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted);justify-content:center">
+                <span>✅ 2 Trades × 1,5% = 3% (Limit erreicht — Stopp)</span>
+                <span>✅ 1 Trade × 2% + kein weiterer Trade</span>
+                <span>✅ Kein gutes Setup = 0 Trades = 0% Risiko</span>
+              </div>
+              <div style="margin-top:12px;padding:10px 12px;background:rgba(239,68,68,0.08);border-left:3px solid var(--red);border-radius:4px;font-size:13px">
+                <strong>Übertrading ist eine Regelverletzung</strong> — egal ob der Trade gewinnt. Mehr Trades als geplant = Regeln gebrochen = du hast verloren.
+              </div>
+            </div>
+            <div class="bc-section-title">🔑 Position Size berechnen</div>
+            <div style="background:rgba(79,142,247,0.06);border:1px solid rgba(79,142,247,0.2);border-radius:var(--radius);padding:14px;font-size:13px;margin-bottom:20px">
+              Suchbegriff: <strong>"Lot size calculator"</strong> oder <strong>"Position size calculator"</strong> → myfxbook.com oder ähnliche Seiten.<br>
+              <span style="color:var(--muted)">Eingabe: Kontostand · Risiko % · Stop-Loss in Pips → Ausgabe: korrekte Lot-Größe</span>
+            </div>
+            <div class="bc-rules">
+              <div class="bc-rule">1–3% des Kontos pro Trade riskieren — nicht mehr, immer</div>
+              <div class="bc-rule">1–3% als Tageslimit gesamt — kein Trade mehr nach Erreichen der Grenze</div>
+              <div class="bc-rule">Konto behandeln wie 200.000 Dollar — unabhängig von der tatsächlichen Größe</div>
+              <div class="bc-rule">Fähigkeit vor Geld — wer die Fähigkeit hat, kommt automatisch zum Geld</div>
+              <div class="bc-rule">Übertrading ist eine Regelverletzung — egal ob der Trade gewinnt</div>
+            </div>
+            <div class="bc-section-title">📝 Hausaufgaben</div>
+            <div class="bc-tasks">
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-video">Aus dem Video</div>
+                <ul class="bc-task-list">
+                  <li>Recherchieren wie das Risiko für dein Instrument berechnet wird: <strong>"Lot size calculator"</strong></li>
+                  <li>Berechnen: Bei Konto 1.000 €, Risiko 1%, Stop-Loss 20 Pips auf EUR/USD — wie viele Lots?</li>
+                  <li>Ergebnis ins Journal eintragen</li>
+                </ul>
+              </div>
+              <div class="bc-task-group">
+                <div class="bc-task-label bc-task-claude">Von Claude</div>
+                <ul class="bc-task-list">
+                  <li>Trading-Plan schreiben: Instrument · Zeitfenster · Max. Risiko/Trade · Max. Tagesrisiko · Max. Trades/Tag · Was nach erstem Verlust?</li>
+                  <li>200.000-Dollar-Test: Wie viele Trades heute? Wie viel Risiko? Genau so ab sofort auf dem Demo handeln</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end bootcamp-content -->
+      </div><!-- end bootcamp-layout -->
+    </div><!-- end page-bootcamp -->
+
   </main>
 </div>
 
@@ -1213,6 +2340,13 @@
 </div>
 
 <script>
+  function showDay(num, btn) {
+    document.querySelectorAll('.day-content').forEach(d => d.classList.remove('active'));
+    document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('day-' + num).classList.add('active');
+    btn.classList.add('active');
+  }
+
   function showPage(name) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
