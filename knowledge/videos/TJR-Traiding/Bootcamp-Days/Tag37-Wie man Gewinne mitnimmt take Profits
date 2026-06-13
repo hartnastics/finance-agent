@@ -1,0 +1,62 @@
+## Deutsche Übersetzung – Wie man Gewinne mitnimmt (Take Profits)
+
+---
+
+Hallo Leute – heute geht es darum, wie man Take Profits setzt. Relativ einfaches Thema, kommen wir direkt zum Punkt.
+
+---
+
+### Das Grundprinzip
+
+Take Profits werden an **Bausteinen** gesetzt – denselben Bausteinen, die wir die ganze Zeit verwendet haben. Sie sind Preiszonen, zu denen der Kurs wahrscheinlich hinzieht.
+
+Was sind unsere Bausteine als Take Profit Ziele?
+- Liquiditätszonen (Hochs und Tiefs, die noch nicht gesweept wurden)
+- Fair Value Gaps (der Kurs wird sie wahrscheinlich füllen)
+- Order Blocks (Bereiche wo Orders liegen)
+
+---
+
+### Wie ich es konkret mache
+
+Wenn ich auf dem 5-Minuten-Chart einsteige, skaliere ich auf den 15-Minuten-Chart hoch und suche dort den ersten sinnvollen Draw auf Liquidität. Das ist mein erster Take Profit.
+
+**Mindestanforderung:** Erstes Take Profit mindestens 1:1 Risiko-Rendite.
+
+Danach weitere Take Profits an weiteren Bausteinen im selben Zeitrahmen oder einen Zeitrahmen höher.
+
+---
+
+### Beispiele
+
+**Beispiel 1 – Short-Position:**
+Einstieg nach Liquiditätssweep und Strukturbruch nach unten. Erste Take Profit Zone: Oberkante eines Order Blocks darunter. Zweite Take Profit Zone: Unterkante desselben Order Blocks, die gleichzeitig eine Liquiditätszone ist. Dritte Take Profit Zone: Fair Value Gap weiter unten.
+
+**Beispiel 2 – Long-Position auf dem 4-Stunden-Chart:**
+Einstieg nach Fair Value Gap Füllung. Erste Take Profit Zone: nächstes Hoch mit Liquidität darüber. Zweite Take Profit Zone: Order Block weiter oben. Dritte Take Profit Zone: Liquidität auf höherem Zeitrahmen.
+
+**Beispiel 3 – 5-Minuten-Ausführung für Trade:**
+Strukturbruch auf dem 5-Minuten-Chart als Einstieg. Erste Take Profit: 5-Minuten Order Block. Zweite Take Profit: Liquiditätszone knapp darunter. Dritte Take Profit: 15-Minuten Fair Value Gap.
+
+---
+
+### Warum Bausteine als Take Profits funktionieren
+
+Weil diese Preiszonen Magnete für den Kurs sind. Wir haben das in diesem ganzen Bootcamp gesehen – Liquiditätszonen werden aufgesucht, Imbalances werden gefüllt, Order Blocks werden berührt. Das ist die Logik. Wenn wir also einen Trade in Richtung dieser Zonen nehmen, sind das unsere natürlichen Austrittspunkte.
+
+---
+
+### Einfache Zusammenfassung
+
+- Ausführungszeitrahmen bestimmen
+- Einen Zeitrahmen höher skalieren
+- Ersten Baustein in Trade-Richtung als Take Profit 1 markieren
+- Weitere Bausteine als Take Profit 2, 3, 4
+
+Prioritäten insgesamt: Daily Bias → Ausführung → Stop Loss → Take Profits. Take Profits sind am wenigsten komplex.
+
+---
+
+Morgen: Stop Losses setzen.
+
+Ich sehe euch morgen. Peace.
