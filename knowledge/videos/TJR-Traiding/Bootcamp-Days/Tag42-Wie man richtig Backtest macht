@@ -1,0 +1,44 @@
+## Deutsche Übersetzung – Wie man richtig Backtest macht
+
+---
+
+Was geht Leute – heute ziehe ich das erste Video aus euren Ideen: **Wie backtestet man richtig?**
+
+---
+
+### Meine ehrliche Meinung zu Bar Replay
+
+Viele von euch haben nach Bar Replay gefragt. Ich werde euch sagen, was ich weiß – nicht unbedingt was ihr hören wollt.
+
+Bar Replay ist in meinen Augen nicht ideal. Das Problem: Wenn ihr auf dem 15-Minuten-Chart in Bar Replay seid und auf den Tageschart wechselt, zeigt er euch die vollständige Tageskerze – nicht den aktuellen Stand. Ihr verliert den Zeitkontext, den ihr für euren Daily Bias braucht. Ohne korrekte Zeitrahmen-Hierarchie verliert ihr den wichtigsten Teil der Analyse.
+
+---
+
+### Was ich stattdessen empfehle
+
+Einfach im Chart zurückscrollen zu einem zufälligen Datum und dann Top-Down analysieren. Wie im echten Trading – nur rückblickend.
+
+Das funktioniert besser, weil:
+- Alle Zeitrahmen korrekt geladen sind
+- Ihr euren Daily Bias normal aufbauen könnt
+- Ihr mehrere Zeitrahmen gleichzeitig verwenden könnt
+
+Noch besser: **Live-Trading auf Demo.** Das bringt echte Emotionen mit – Kerzen, die sich formen, sich auf- und abwärts bewegen, euch verunsichern. Das kommt in Bar Replay nicht vor. Und Emotionen managen ist ein riesiger Teil des Tradings.
+
+---
+
+### Praktisches Vorgehen für dieses Wochenende
+
+Geht auf eure Charts und schaut euch die vergangene Woche an. Findet pro Tag ein bis zwei gute Trade-Setups, die ihr hätte nehmen können. Markiert alle Bausteine: Wo war der Liquiditätssweep? Wo war der Strukturbruch? Wo wäre der Einstieg gewesen?
+
+Das ist im Grunde Zielschießen – ihr trainiert das Auge, bis es automatisch läuft. Genau wie bei den Hausaufgaben zu Order Blocks, Fair Value Gaps und Liquiditätssweeps. Wiederholt das, bis ihr einen Chart aufmacht und sofort die Muster seht.
+
+---
+
+### Der einzige Engpass danach
+
+Wenn ihr die Bausteine sehen könnt, wenn ihr die Setups erkennt – dann fehlt meistens nur noch das richtige Headset: die Psychologie, die Disziplin, die Emotionskontrolle. Und genau daran haben wir die letzten Wochen auch gearbeitet.
+
+Nächste Woche: weiter live traden auf Demo, weitere kleine Fehler angehen.
+
+Ich sehe euch morgen. Peace.
