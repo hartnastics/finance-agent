@@ -1,0 +1,67 @@
+## Deutsche Übersetzung – Positionsgrößenberechnung (Lot-Size)
+
+---
+
+Frohes Viertes Juli – ich mache dieses Video noch schnell und dann genieße ich den Feiertag.
+
+Heute: **Wie berechnet man die Lot-Size?**
+
+---
+
+### Drei Methoden – eine davon kommt nicht infrage
+
+1. **Feste Lot-Size** (was ich nutze)
+2. **Berechnete Lot-Size** für jeden Trade
+3. **Full Port** (gesamtes Konto auf einen Trade) – kommt nicht infrage, macht das nie
+
+---
+
+### Methode 2: Lot-Size berechnen
+
+**Für Forex und Gold:**
+
+App-Empfehlung: **Stinu** (S-T-I-N-U) im App Store. Man gibt ein:
+- Kontostand
+- Risikoprozent (z.B. 1%)
+- Stop-Loss in Pips
+
+Dann wählt man das Paar und bekommt die exakte Lot-Size ausgegeben.
+
+Alternative: Lot-Size-Rechner-Website, die auch den S&P 500 unterstützt.
+
+**Wie findet man den Stop-Loss in Pips?**
+Im MetaTrader das Short-/Long-Position-Tool auf den Chart legen. Neben dem Stop-Loss-Niveau steht automatisch die Pip-Anzahl. Einfach ablesen und eintragen.
+
+**Für den S&P 500:**
+Wichtig: Kontraktgröße (Units per Lot) variiert je nach Broker. In MetaTrader auf das Instrument klicken → Details → Kontraktgröße ablesen. Bei Hank (eigener Broker): 10 Units per Lot. Bei vielen anderen Brokern und Prop Firms: 100 Units per Lot. Immer prüfen, bevor man tradet.
+
+---
+
+### Methode 1: Feste Lot-Size (für Fortgeschrittene)
+
+Wenn man ein Gespür für den eigenen durchschnittlichen Stop-Loss entwickelt hat, kann man eine feste Lot-Size nutzen. Das spart Zeit.
+
+**Beispiel-Berechnung:**
+Konto: 100.000 Dollar. Durchschnittlicher minimaler Stop-Loss auf dem S&P: 4 Punkte. Berechnet: 25 Lots = 1% Risiko bei 4 Punkten Stop.
+
+Das ist dann die **Normale Lot-Size**.
+
+**Drei Stufen:**
+
+- **D-Risk (50% der normalen):** An Hochimpakt-Nachrichtentagen, Bankfeiertagen, unsicherer Marktlage. Heute zum Beispiel: Bankfeiertag und schlechte Bedingungen → D-Risk.
+
+- **Normal (100%):** Standard-Tage ohne besondere Nachrichten.
+
+- **Confident (200%):** Wenn alle Biases perfekt ausgerichtet sind, keine Nachrichten, ideales Setup. **Ihr sollt das nie nutzen** – dafür braucht man bewiesene Profitabilität über längere Zeit. Wer das noch nicht hat, bleibt bei Normal oder D-Risk.
+
+---
+
+### Für euch gilt aktuell
+
+Ihr tradet noch auf Demo oder mit sehr kleinen Live-Konten. Berechnet eure Lot-Size jedes Mal mit dem Kalkulator. Erst wenn ihr ein gutes Gefühl für euren durchschnittlichen Stop-Loss entwickelt habt, könnt ihr auf feste Lot-Sizes umsteigen.
+
+Eins pro Paar – weil jedes Paar andere Volatilität hat und damit andere Stop-Loss-Breiten.
+
+---
+
+Morgen gibt es ein weiteres Video. Ich sehe euch dann. Peace.
