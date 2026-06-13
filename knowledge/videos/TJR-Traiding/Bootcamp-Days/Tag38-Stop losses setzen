@@ -1,0 +1,52 @@
+## Deutsche Übersetzung – Stop Losses setzen
+
+---
+
+Heute geht es um Stop Losses. Wir nutzen dabei den heutigen Trade als erstes Beispiel.
+
+---
+
+### Das Grundprinzip
+
+Mein Stop Loss kommt fast immer **über den Liquiditätssweep** (bei Shorts) bzw. **unter den Liquiditätssweep** (bei Longs).
+
+Warum? Weil das der Invalidierungspunkt ist. Wenn wir Short gegangen sind, weil ein Hoch gesweept wurde und Struktur gebrochen hat – dann ist unsere Idee falsch, wenn der Kurs wieder über dieses Hoch steigt. Dann wurden keine Orders gefüllt, die unsere These bestätigen. Also: Stop über dem Sweep = Stop an dem Punkt, wo wir falsch liegen.
+
+---
+
+### Spread berücksichtigen
+
+Setzt den Stop nie exakt auf den Preispunkt, sonst erwischt euch der Spread. Gebt immer ein kleines Polster – bei Futures zum Beispiel 0,5 Punkte unter dem eigentlichen Niveau. So verhindert ihr, dass ihr durch normale Bid-Ask-Differenzen rausgestoppt werdet.
+
+---
+
+### Ausnahmen
+
+Wenn der Liquiditätssweep so weit entfernt ist, dass das Risiko-Rendite-Verhältnis katastrophal wäre, kann man den Stop näher setzen – zum Beispiel über den Order Block, in den man eingestiegen ist. Der Nachteil: Preis könnte euch rausstoppt, dann weiterlaufen und doch in eure Richtung gehen. Das ist der Kompromiss.
+
+---
+
+### Der heutige Trade
+
+Wir hatten einen 5-Minuten-Liquiditätssweep und einen 1-Minuten-Strukturbruch nach oben. Stop wurde unter den 5-Minuten-Sweep gesetzt. Preis hat uns knapp rausgestoppt, läuft jetzt in unsere Richtung – wie der Daily Bias es vorhergesagt hat. Bias war richtig, Ausführung hat uns rausgestoppt. Das ist kein Weltuntergang, das ist eine Lektion.
+
+---
+
+### Risikoreduzierung je nach Marktsituation
+
+An Tagen mit hoher Nachrichtenaktivität oder Bankfeiertagen reduziere ich meine Lot-Size. Diese Woche: mehrere hochimpaktige Nachrichten, morgen Bankfeiertag – also halbe normale Größe.
+
+**Morgen nicht traden.** US-Bankfeiertag bedeutet niedrige Volatilität und träge Märkte auf fast allen Paaren. Wer trotzdem tradet, handelt unter schlechten Bedingungen.
+
+---
+
+### Zusammenfassung
+
+- Stop Loss = Invalidierungspunkt, nicht eine willkürliche Pip-Anzahl
+- Fast immer: Stop über/unter dem Liquiditätssweep
+- Spread immer einkalkulieren
+- Risikobereitschaft bestimmt Lot-Size, nicht umgekehrt
+
+Morgen: Feste Lot-Größen und wie man die eigene Risikoberechnung strukturiert.
+
+Ich sehe euch morgen. Peace.
