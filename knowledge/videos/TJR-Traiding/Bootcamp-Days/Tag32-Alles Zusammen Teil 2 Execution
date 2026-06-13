@@ -1,0 +1,71 @@
+## Deutsche Übersetzung – Alles zusammensetzen Teil 2 (Chartbeispiele)
+
+---
+
+Willkommen zu Teil 2 der Alles-zusammensetzen-Serie. Heute werden wir Beispiele auf dem Chart durchgehen. Ich teile das in zwei Videos auf:
+
+- Heute: Liquiditätssweep + Strukturbruch und Liquiditätssweep + Strukturbruch + Order Block
+- In zwei Tagen: Liquiditätssweep + Strukturbruch + Fair Value Gap und die vollständige Kombination mit Equilibrium
+
+---
+
+### Wichtige Vorbemerkung
+
+Das hier ist das Grundgerüst der Strategie. Es allein macht euch nicht profitabel. Es zeigt euch, wie und wo ihr ausführt. Was danach kommt – Stop-Loss-Platzierung, Take Profits, Daily Bias – das sind die nächsten Videos. Alles zu seiner Zeit.
+
+---
+
+### Einstiegstechnik 1: Liquiditätssweep + Strukturbruch
+
+**Das Schema:**
+1. Hochs oder Tiefs identifizieren – dort liegt Liquidität
+2. Liquidität wird gesweept (Hoch oder Tief wird genommen)
+3. Strukturbruch bestätigt Richtungsänderung
+4. Einstieg
+
+**Was danach passiert:** Der Kurs zieht zu vorherigen Liquiditätszonen.
+
+Auf jedem Paar, jedem Zeitrahmen dasselbe. Immer wieder. Tief gesweept, Strukturbruch nach oben – Kurs ralliert. Hoch gesweept, Strukturbruch nach unten – Kurs fällt.
+
+Das ist der riskanteste Einstieg der vier Varianten, weil er die wenigsten Bestätigungen hat. Aber er existiert.
+
+---
+
+### Einstiegstechnik 2: Liquiditätssweep + Strukturbruch + Order Block
+
+**Das Schema:**
+1. Liquidität wird gesweept
+2. Strukturbruch bestätigt Richtung
+3. Welche Bewegung hat den Strukturbruch verursacht? Das ist der Order Block
+4. Warten, bis der Kurs in diesen Order Block zurückkommt
+5. Dort einsteigen
+
+**Beispiele:**
+- Tiefs werden gesweept, Strukturbruch nach oben. Welche Abwärtsbewegung hat das verursacht? Markiert als Order Block. Kurs kommt zurück, tippt rein – einsteigen. Danach: Rallye.
+- Hochs werden gesweept, Strukturbruch nach unten. Aufwärtsbewegung davor = Order Block. Kurs kommt zurück – einsteigen. Danach: Abverkauf.
+
+Das passiert auf jedem Zeitrahmen. Auf GU, GJ, Gold, S&P – überall.
+
+---
+
+### Warum Chartbeispiele sammeln hilft
+
+Der Grund, warum ich euch bitte, diese Beispiele immer wieder zu finden: Es geht darum, Vertrauen aufzubauen. Wenn ihr 20, 30, 50 Mal gesehen habt, dass nach einem Liquiditätssweep und Strukturbruch der Kurs in die Order Block Zone kommt und reagiert – dann habt ihr das Vertrauen, echte Trades zu nehmen.
+
+Für mich ist das mittlerweile automatisch. Ich sehe einen Sweep, sehe den Strukturbruch, sehe die Bewegung davor – und weiß sofort: Das ist der Order Block, dorthin zieht es. Das kommt durch Wiederholung.
+
+---
+
+### Hausaufgaben
+
+**Aufgabe 1:** Findet **10 Beispiele** von Liquiditätssweep + Strukturbruch auf eurem Paar. Schaut einfach, was danach passiert. Nur beobachten, nicht mehr.
+
+**Aufgabe 2:** Findet **10 Beispiele** von Liquiditätssweep + Strukturbruch + Order Block Entry. Markiert wo der Einstieg gewesen wäre und was danach passiert ist.
+
+Ihr könnt mehrere Paare nutzen. Aber mindestens auf eurem Hauptpaar.
+
+Wiederholt das, bis es automatisch wird. Bis ihr den Chart aufmacht und sofort seht: Sweep – Strukturbruch – Order Block – done.
+
+In zwei Tagen: Fair Value Gap und die vollständige Kombination mit Equilibrium.
+
+Ich sehe euch morgen. Peace.
